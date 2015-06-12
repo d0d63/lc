@@ -1,6 +1,4 @@
-# Copyright (c) 2005, 2006, 2007, 2010 M. Dodge Mumford. All rights reserved.
-# $dodge: sshd.lcc,v 1.19 2013/12/17 13:52:21 dodge Exp $
-# vim: tw=0
+# Copyright (c) 2005, 2006, 2007, 2010, 2015 M. Dodge Mumford. All rights reserved.
 
 ^%DATE% %HOSTNAME% sshd%PID%: Accepted (keyboard-interactive/pam|password|publickey) for %USERS% from %IP% port %INT%(| ssh2)$
 ^%DATE% %HOSTNAME% sshd%PID%: Address %IP% maps to [^ ]+, but this does not map back to the address - POSSIBLE BREAKIN ATTEMPT!$

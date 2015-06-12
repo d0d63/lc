@@ -1,7 +1,5 @@
 #!/usr/bin/perl
-# vim: tw=0
-# Copyright (c) 2005, 2006, 2007, 2009, 2010 M. Dodge Mumford. All rights reserved.
-# $dodge: lc,v 1.24 2010/01/05 02:40:32 dodge Exp $
+# Copyright (c) 2005, 2006, 2007, 2009, 2010, 2015 M. Dodge Mumford. All rights reserved.
 
 $LCC_DIR = './lcc/';		# Where the .lcc files are
 

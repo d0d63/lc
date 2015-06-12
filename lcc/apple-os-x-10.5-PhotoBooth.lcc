@@ -1,8 +1,0 @@
-# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
-# $dodge: apple-os-x-10.5-PhotoBooth.lcc,v 1.2 2010/01/05 03:01:39 dodge Exp $
-# vim: tw=0
-
-^%DATE% %HOSTNAME% \[0x0-0x%HEX%\]\.com\.apple\.PhotoBooth%PID%:[ 	]*
-
-^%DATE% %HOSTNAME% Photo Booth%PID%: CGImageDestinationAddImageFromSource image 0 of source is nil$
-^%DATE% %HOSTNAME% Photo Booth%PID%: CGImageDestinationFinalize image destination does not have enough images$

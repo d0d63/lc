@@ -1,6 +1,4 @@
-# Copyright (c) 2013 M. Dodge Mumford. All rights reserved.
-# $dodge: mfs.lcc,v 1.4 2013/12/19 14:38:23 dodge Exp $
-# vim: tw=0
+# Copyright (c) 2013, 2015 M. Dodge Mumford. All rights reserved.
 
 ^%DATE% %HOSTNAME% mfschunkserver%PID%: testing chunk: /mfs/chunks(|/[abc])/%HEX%/chunk_%HEX%_%HEX%\.mfs$
 

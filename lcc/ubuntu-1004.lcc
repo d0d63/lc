@@ -1,6 +1,4 @@
-# Copyright (c) 2005, 2006, 2007, 2010 M. Dodge Mumford. All rights reserved.
-# $dodge: ubuntu-1004.lcc,v 1.2 2015/06/10 10:50:44 dodge Exp $
-# vim: tw=0
+# Copyright (c) 2005, 2006, 2007, 2010, 2015 M. Dodge Mumford. All rights reserved.
 
 ^%DATE% %HOSTNAME% anacron%PID%: Anacron 2\.3 started on 20[0-9][0-9]-[01][0-9]-[0123][0-9]$
 ^%DATE% %HOSTNAME% anacron%PID%: Job \`cron\.(daily|weekly)\' started$

@@ -1,6 +1,4 @@
-# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
-# $dodge: openbsd-4.3.lcc,v 1.6 2010/01/05 03:04:37 dodge Exp $ 
-# vim: tw=0
+# Copyright (c) 2009, 2010, 2015 M. Dodge Mumford. All rights reserved.
 
 ^%DATE% %HOSTNAME% cron%PID%: \(root\) CMD \(umask 077; /bin/sh /etc/(daily|weekly|monthly) 2\>\&1 | tee /var/log/(daily|weekly|monthly)\.out | mail -s \"\`/bin/hostname\` (daily|weekly|monthly) output\" root\)$
 ^%DATE% %HOSTNAME% cron%PID%: \(root\) CMD \(/usr/bin/newsyslog\)$

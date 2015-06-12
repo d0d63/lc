@@ -1,6 +1,6 @@
 #!/bin/sh
-# Copyright (c) 2005, 2006, 2007, 2009, 2010 M. Dodge Mumford. All Rights Reserved.
-# $dodge: mon,v 1.17 2010/01/05 02:40:32 dodge Exp $
+# Copyright (c) 2005, 2006, 2007, 2009, 2010, 2015 M. Dodge Mumford. All
+# Rights Reserved.
 
 # Using globals everywhere because I can't find a way to get a string value
 # to return from a function. :-P

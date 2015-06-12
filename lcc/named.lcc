@@ -1,6 +1,4 @@
-# Copyright (c) 2005, 2006, 2007, 2010 M. Dodge Mumford. All rights reserved.
-# $dodge: named.lcc,v 1.7 2010/01/05 03:04:37 dodge Exp $
-# vim: tw=0
+# Copyright (c) 2005, 2006, 2007, 2010, 2015 M. Dodge Mumford. All rights reserved.
 
 ^%DATE% %HOSTNAME% named%PID%: Binding locally$
 ^%DATE% %HOSTNAME% named%PID%: client %DNS_MASTER_SLAVES%#%INT%: transfer of \'%DNS_MASTER_ZONES%/IN\': (AXFR|AXFR-style IXFR|IXFR) (ended|started)$

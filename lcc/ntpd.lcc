@@ -1,6 +1,4 @@
-# Copyright (c) 2005, 2006, 2007, 2010 M. Dodge Mumford. All rights reserved.
-# $dodge: ntpd.lcc,v 1.16 2015/06/10 10:51:00 dodge Exp $
-# vim: tw=0
+# Copyright (c) 2005, 2006, 2007, 2010, 2015 M. Dodge Mumford. All rights reserved.
 
 ^%DATE% %HOSTNAME% ntpd%PID%: adjusting clock frequency by %FLOAT% to %FLOAT%ppm$
 ^%DATE% %HOSTNAME% ntpd%PID%: adjusting local clock by (|-)0\.[0-9]+s$

@@ -1,8 +1,0 @@
-# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
-# $dodge: apple-os-x-10.5-Java.lcc,v 1.2 2010/01/05 03:01:39 dodge Exp $
-# vim: tw=0
-
-^%DATE% %HOSTNAME% /System/Library/Frameworks/JavaVM\.framework/Versions/1\.5/Commands/java%PID%: Java has built shared archive /System/Library/Frameworks/JavaVM\.framework/Versions/1\.5\.0/Libraries/classes\.jsa$
-
-^%DATE% %HOSTNAME% /System/Library/Frameworks/JavaVM\.framework/Versions/1\.5\.0/Home/bin/java%PID%: Java is sending command \'1\.5\' to updateSharingD$
-^%DATE% %HOSTNAME% /System/Library/Frameworks/JavaVM\.framework/Versions/1\.5\.0/Home/bin/java%PID%: Java requesting shared archive generation, version 1\.5$

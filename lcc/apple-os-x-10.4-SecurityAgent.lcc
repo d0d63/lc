@@ -1,7 +1,0 @@
-# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
-# $dodge: apple-os-x-10.4-SecurityAgent.lcc,v 1.2 2010/01/05 03:01:38 dodge Exp $
-# vim: tw=0
-
-^%DATE% %HOSTNAME% SecurityAgent%PID%: Autologin user authenticated\.$
-^%DATE% %HOSTNAME% SecurityAgent%PID%: FUS user authenticated\.$
-^%DATE% %HOSTNAME% SecurityAgent%PID%: User Authenticated: continue login process$

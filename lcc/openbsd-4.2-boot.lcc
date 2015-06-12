@@ -1,6 +1,4 @@
-# Copyright (c) 2007, 2010 M. Dodge Mumford. All rights reserved.
-# $dodge: openbsd-4.2-boot.lcc,v 1.12 2010/01/05 03:24:59 dodge Exp $
-# vim: tw=0
+# Copyright (c) 2007, 2010, 2015 M. Dodge Mumford. All rights reserved.
 
 ^%DATE% %HOSTNAME% /bsd: OpenBSD 4\.2 \(.*\) #[0-9]+: .*$
 ^%DATE% %HOSTNAME% /bsd:     root@tard\.dmumford\.com:/data/src/sys/arch/i386/compile/TARD

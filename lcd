@@ -1,6 +1,6 @@
 #!/bin/sh
-# Copyright (c) 2005, 2006, 2007, 2010 M. Dodge Mumford. All Rights Reserved.
-# $dodge: lcd,v 1.20 2012/01/08 11:25:23 dodge Exp $
+# Copyright (c) 2005, 2006, 2007, 2010, 2015 M. Dodge Mumford. All Rights
+# Reserved.
 
 # This script should be executed from cron. It will run all the tests and
 # send an email containing new log changes since the last time it was run.

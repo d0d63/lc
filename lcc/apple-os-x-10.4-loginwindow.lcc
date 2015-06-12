@@ -1,9 +1,0 @@
-# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
-# $dodge: apple-os-x-10.4-loginwindow.lcc,v 1.2 2010/01/05 03:01:38 dodge Exp $
-# vim: tw=0
-
-^%DATE% %HOSTNAME% /System/Library/CoreServices/loginwindow\.app/Contents/MacOS/loginwindow: Login Window Application Started$
-
-^%DATE% %HOSTNAME% loginwindow%PID%: Login Window Started Security Agent$
-
-^%DATE% %HOSTNAME% SecurityAgent%PID%: Showing Login Window$

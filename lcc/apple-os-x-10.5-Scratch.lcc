@@ -1,7 +1,0 @@
-# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
-# $dodge: apple-os-x-10.5-Scratch.lcc,v 1.2 2010/01/05 03:01:39 dodge Exp $
-# vim: tw=0
-
-^%DATE% %HOSTNAME%.* Scratch\(%INT%,0x%HEX%\) malloc: \*\*\* error for object 0x%HEX%: pointer being freed was not allocated.*$
-
-^%DATE% %HOSTNAME% \[0x0-0x%HEX%\]\.edu\.mit\.scratch%PID%: \*\*\* set a breakpoint in malloc_error_break to debug$

@@ -1,9 +1,0 @@
-# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
-# $dodge: apple-os-x-10.5-SystemPreferences.lcc,v 1.2 2010/01/05 03:01:39 dodge Exp $
-# vim: tw=0
-
-^%DATE% %HOSTNAME% System Preferences%PID%: \*\*\* Message from <QCRSSDownloader = 0x%HEX% \"Syndication_2\">:.*RSS processing for URL \"http://www\.apple\.com/main/rss/hotnews/hotnews\.rss\" failed$
-^%DATE% %HOSTNAME% System Preferences%PID%: Admin\.xgridAgentControllerPassword: called without first being authenticated\.$
-^%DATE% %HOSTNAME% System Preferences%PID%: Error: __performScan\(\) failed \(82\)$
-^%DATE% %HOSTNAME% System Preferences%PID%: Error: Apple80211Scan\(\) error 82$
-^%DATE% %HOSTNAME% System Preferences%PID%: ScreenSaverDefaults does not respond to volatileDomainForName:$

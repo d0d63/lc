@@ -1,8 +1,10 @@
-$dodge: README,v 1.4 2010/01/05 02:34:39 dodge Exp $
-Copyright (c) 2005, 2006, 2007, 2010 M. Dodge Mumford.  All rights reserved.
+Copyright (c) 2005, 2006, 2007, 2010, 2015 M. Dodge Mumford.  All rights
+reserved.
 
 This set of scripts helps analyze and report log file changes, ignoring
-things that are reasonably normal.
+things that are reasonably normal. At least that was the original goal. At
+this point, it's almost certainly the wrong way to do things. (I know how to
+sell myself, huh?).
 
 The first thing you should do is look in the lcc/ directory and remove the
 .lcc, .macro, and .squish files for operating systems and applications that
@@ -11,7 +13,8 @@ and fill in the relevant entries. Make sure that /etc/syslog.conf has an
 entry like:
 	*.*				/var/log/all
 and that log rotation is setup for that. Note that SunOS' syslog *hates*
-doing this, so play with it a bit.
+doing this, so play with it a bit. Also note that OS X logs a *LOT* of
+stuff.
 
 Then run "./mon /var/log/all*" and start filling out lcc/local.lcc with
 entries that are "normal" for the machine. I often also create an

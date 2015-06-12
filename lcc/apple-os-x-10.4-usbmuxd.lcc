@@ -1,6 +1,0 @@
-# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
-# $dodge: apple-os-x-10.4-usbmuxd.lcc,v 1.2 2010/01/05 03:01:38 dodge Exp $
-# vim: tw=0
-
-^%DATE% %HOSTNAME% usbmuxd%PID%: HandleUSBMuxConnect Client 0x%HEX% \(iTunes/com\.apple\.iTunes\) requesting attach to 0x1:%INT% failed, no such device$
-^%DATE% %HOSTNAME% usbmuxd%PID%: usbmuxd-176 built for iTunesNineDot on Sep 24 2009 at 16:11:05, running 32 bit$

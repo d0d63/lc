@@ -1,6 +1,4 @@
-# Copyright (c) 2007, 2009, 2010 M. Dodge Mumford. All rights reserved.
-# $dodge: openvpn.lcc,v 1.9 2010/01/05 03:04:37 dodge Exp $ 
-# vim: tw=0
+# Copyright (c) 2007, 2009, 2010, 2015 M. Dodge Mumford. All rights reserved.
 
 ^%DATE% %HOSTNAME% openvpn%PID%: %IP%:%INT% \[%OPENVPN_CLIENTS%\] Peer Connection Initiated with %IP%:%INT%$
 ^%DATE% %HOSTNAME% openvpn%PID%: %IP%:%INT% Re-using SSL/TLS context$

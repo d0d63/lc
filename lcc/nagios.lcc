@@ -1,8 +1,4 @@
-# Copyright (c) 2005, 2006, 2007, 2013 M. Dodge Mumford. All rights reserved.
-#
-# vim: tw=0
-# $dodge: nagios.lcc,v 1.1 2013/12/19 14:37:22 dodge Exp $ 
-#
+# Copyright (c) 2005, 2006, 2007, 2013, 2015 M. Dodge Mumford. All rights reserved.
 
 ^%DATE% %HOSTNAME% nagios3: Auto-save of retention data completed successfully\.$
 

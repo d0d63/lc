@@ -1,6 +1,4 @@
-# Copyright (c) 2007 M. Dodge Mumford. All rights reserved.
-# $dodge: local.macro,v 1.4 2007/10/09 18:29:59 dodge Exp $
-# vim: tw=0
+# Copyright (c) 2007, 2015 M. Dodge Mumford. All rights reserved.
 
 %DOMAIN% (XXX|localhost)
 %HOSTNAME% (XXX|localhost)
