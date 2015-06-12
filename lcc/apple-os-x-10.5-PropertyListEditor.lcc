@@ -1,0 +1,7 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-PropertyListEditor.lcc,v 1.2 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% \[0x0-0x%HEX%\]\.com\.apple\.PropertyListEditor%PID%: Property List Editor\(%INT%,0x%HEX%\) malloc: free_garbage: garbage ptr = 0x%HEX%, has non-zero refcount = 1$
+
+^%DATE% %HOSTNAME% Property List Editor%PID%: Property List Editor\(%INT%,0x%HEX%\) malloc: free_garbage: garbage ptr = 0x%HEX%, has non-zero refcount = 1$

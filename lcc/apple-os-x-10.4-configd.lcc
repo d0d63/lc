@@ -1,0 +1,16 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.4-configd.lcc,v 1.2 2010/01/05 03:01:38 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% configd%PID%:[ 	]*target=enable-network: disabled$
+^%DATE% %HOSTNAME% configd%PID%:[ 	]*target=enable-network: exit status = 1$
+^%DATE% %HOSTNAME% configd%PID%: (adding|loading) +com\.apple\.(configd\.Apple80211|print\.notification|SystemConfiguration\.(PreferencesMonitor|PPPController|Kicker|IPMonitor|IPConfiguration|IP6Configuration|EAPOLController|ATconfig|LinkConfiguration|KernelEventMonitor|BatteryUpdater13|Bluetooth|DynamicPowerStep|InterfaceNamer|PowerManagement))$
+^%DATE% %HOSTNAME% configd%PID%: AppleTalk startup(| complete)$
+^%DATE% %HOSTNAME% configd%PID%: AppleTalk shutdown(| complete)$
+^%DATE% %HOSTNAME% configd%PID%: executing /System/Library/SystemConfiguration/Kicker\.bundle/Contents/Resources/enable-network$
+^%DATE% %HOSTNAME% configd%PID%: hostname \((DHCP|multicast DNS)\) = %HOSTNAME%$
+^%DATE% %HOSTNAME% configd%PID%: PM configd:_copyPMSettings\(\): using profile \#1 for power source Battery Power$
+^%DATE% %HOSTNAME% configd%PID%: PM configd:_copyPMSettings\(\): using profile \#2 for power source AC Power$
+^%DATE% %HOSTNAME% configd%PID%: posting notification com\.apple\.system\.config\.network_change$
+^%DATE% %HOSTNAME% configd%PID%: setting hostname to \"(%HOSTNAME%|%HOSTNAME%\.%DOMAIN%)\"$
+^%DATE% %HOSTNAME% configd%PID%: Starting kicker for (AppleFileServer|enable-network|network_change)$

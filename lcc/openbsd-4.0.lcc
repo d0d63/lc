@@ -1,0 +1,115 @@
+# Copyright (c) 2005, 2006, 2007 M. Dodge Mumford. All rights reserved.
+# $dodge: openbsd-4.0.lcc,v 1.5 2010/01/05 03:04:37 dodge Exp $
+# vim: tw=0
+
+%DATE% %HOSTNAME% \/bsd: OpenBSD 3\.7-current \(GENERIC\.MP\) #0: Fri Jun 24 14:33:53 EDT 2005
+%DATE% %HOSTNAME% \/bsd:     root@[^ ]:\/usr\/src\/sys\/arch\/i386\/compile\/GENERIC\.MP
+%DATE% %HOSTNAME% \/bsd: cpu0: Intel Pentium III \("GenuineIntel" 686-class\) 1 GHz
+%DATE% %HOSTNAME% \/bsd: cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,MMX,FXSR,SSE
+%DATE% %HOSTNAME% \/bsd: real mem  = 1073258496 \(1048104K\)
+%DATE% %HOSTNAME% \/bsd: avail mem = 972742656 \(949944K\)
+%DATE% %HOSTNAME% \/bsd: using 4278 buffers containing 53764096 bytes \(52504K\) of memory
+%DATE% %HOSTNAME% \/bsd: mainbus0 \(root\)
+%DATE% %HOSTNAME% \/bsd: bios0 at mainbus0: AT\/286\+\(00\) BIOS, date 05\/25\/01, BIOS32 rev\. 0 @ 0xfdae0
+%DATE% %HOSTNAME% \/bsd: apm0 at bios0: Power Management spec V1\.2
+%DATE% %HOSTNAME% \/bsd: apm0: AC on, battery charge unknown
+%DATE% %HOSTNAME% \/bsd: apm0: flags 30102 dobusy 0 doidle 1
+%DATE% %HOSTNAME% \/bsd: pcibios0 at bios0: rev 2\.1 @ 0xf0000\/0x10000
+%DATE% %HOSTNAME% \/bsd: pcibios0: PCI IRQ Routing Table rev 1\.0 @ 0xf7450\/144 \(7 entries\)
+%DATE% %HOSTNAME% \/bsd: pcibios0: PCI Interrupt Router at 000:07:0 \("VIA VT82C686 ISA" rev 0x00\)
+%DATE% %HOSTNAME% \/bsd: pcibios0: PCI bus #1 is the last bus
+%DATE% %HOSTNAME% \/bsd: bios0: ROM list: 0xc0000\/0x8000 0xc8000\/0x1000
+%DATE% %HOSTNAME% \/bsd: mainbus0: Intel MP Specification \(Version 1\.1\) \(VIA      VT3075      \)
+%DATE% %HOSTNAME% \/bsd: cpu0 at mainbus0: apid 0 \(boot processor\)
+%DATE% %HOSTNAME% \/bsd: cpu0: apic clock running at 132 MHz
+%DATE% %HOSTNAME% \/bsd: cpu1 at mainbus0: apid 1 \(application processor\)
+%DATE% %HOSTNAME% \/bsd: cpu1: Intel Pentium III \("GenuineIntel" 686-class\) 1 GHz
+%DATE% %HOSTNAME% \/bsd: cpu1: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,SER,MMX,FXSR,SSE
+%DATE% %HOSTNAME% \/bsd: mainbus0: bus 0 is type PCI   
+%DATE% %HOSTNAME% \/bsd: mainbus0: bus 1 is type PCI   
+%DATE% %HOSTNAME% \/bsd: mainbus0: bus 2 is type ISA   
+%DATE% %HOSTNAME% \/bsd: ioapic0 at mainbus0: apid 2 pa 0xfec00000, version 11, 24 pins
+%DATE% %HOSTNAME% \/bsd: pci0 at mainbus0 bus 0: configuration mode 1 \(no bios\)
+%DATE% %HOSTNAME% \/bsd: pchb0 at pci0 dev 0 function 0 "VIA VT82C691 PCI" rev 0xc4
+%DATE% %HOSTNAME% \/bsd: ppb0 at pci0 dev 1 function 0 "VIA VT82C598 AGP" rev 0x00
+%DATE% %HOSTNAME% \/bsd: pci1 at ppb0 bus 1
+%DATE% %HOSTNAME% \/bsd: vga1 at pci1 dev 0 function 0 "ATI Mach64 GM" rev 0x27
+%DATE% %HOSTNAME% \/bsd: wsdisplay0 at vga1 mux 1: console \(80x25, vt100 emulation\)
+%DATE% %HOSTNAME% \/bsd: wsdisplay0: screen 1-5 added \(80x25, vt100 emulation\)
+%DATE% %HOSTNAME% \/bsd: pcib0 at pci0 dev 7 function 0 "VIA VT82C686 ISA" rev 0x22
+%DATE% %HOSTNAME% \/bsd: pciide0 at pci0 dev 7 function 1 "VIA VT82C571 IDE" rev 0x10: ATA66, channel 0 configured to compatibility, channel 1 configured to compatibility
+%DATE% %HOSTNAME% \/bsd: wd0 at pciide0 channel 0 drive 0: <WDC AC315300D>
+%DATE% %HOSTNAME% \/bsd: wd0: 16-sector PIO, LBA, 14664MB, 30033360 sectors
+%DATE% %HOSTNAME% \/bsd: wd0\(pciide0:0:0\): using PIO mode 4, Ultra-DMA mode 4
+%DATE% %HOSTNAME% \/bsd: atapiscsi0 at pciide0 channel 1 drive 0
+%DATE% %HOSTNAME% \/bsd: scsibus0 at atapiscsi0: 2 targets
+%DATE% %HOSTNAME% \/bsd: cd0 at scsibus0 targ 0 lun 0: <MITSUMI, CD-ROM SR243T, L01J> SCSI0 5\/cdrom removable
+%DATE% %HOSTNAME% \/bsd: cd0\(pciide0:1:0\): using PIO mode 4, Ultra-DMA mode 2
+%DATE% %HOSTNAME% \/bsd: uhci0 at pci0 dev 7 function 2 "VIA VT83C572 USB" rev 0x10: apic 2 int 11 \(irq 11\)
+%DATE% %HOSTNAME% \/bsd: usb0 at uhci0: USB revision 1\.0
+%DATE% %HOSTNAME% \/bsd: uhub0 at usb0
+%DATE% %HOSTNAME% \/bsd: uhub0: VIA UHCI root hub, class 9\/0, rev 1\.00\/1\.00, addr 1
+%DATE% %HOSTNAME% \/bsd: uhub0: 2 ports with 2 removable, self powered
+%DATE% %HOSTNAME% \/bsd: uhci1 at pci0 dev 7 function 3 "VIA VT83C572 USB" rev 0x10: apic 2 int 11 \(irq 11\)
+%DATE% %HOSTNAME% \/bsd: usb1 at uhci1: USB revision 1\.0
+%DATE% %HOSTNAME% \/bsd: uhub1 at usb1
+%DATE% %HOSTNAME% \/bsd: uhub1: VIA UHCI root hub, class 9\/0, rev 1\.00\/1\.00, addr 1
+%DATE% %HOSTNAME% \/bsd: uhub1: 2 ports with 2 removable, self powered
+%DATE% %HOSTNAME% \/bsd: viaenv0 at pci0 dev 7 function 4 "VIA VT82C686 SMBus" rev 0x30
+%DATE% %HOSTNAME% \/bsd: fxp[0-9] at pci[0-9]+ dev [0-9]+ function 0 "Intel 82557" rev 0x08, i82559: apic 2 int [0-9]+ \(irq [0-9]+\), address [0-9a-f:]+
+%DATE% %HOSTNAME% \/bsd: inphy0 at fxp[0-9]+ phy 1: i82555 10\/100 PHY, rev\. 4
+%DATE% %HOSTNAME% \/bsd: isa0 at pcib0
+%DATE% %HOSTNAME% \/bsd: isadma0 at isa0
+%DATE% %HOSTNAME% \/bsd: pckbc0 at isa0 port 0x60\/5
+%DATE% %HOSTNAME% \/bsd: pckbd0 at pckbc0 \(kbd slot\)
+%DATE% %HOSTNAME% \/bsd: pckbc0: using irq 1 for kbd slot
+%DATE% %HOSTNAME% \/bsd: wskbd0 at pckbd0: console keyboard, using wsdisplay0
+%DATE% %HOSTNAME% \/bsd: pcppi0 at isa0 port 0x61
+%DATE% %HOSTNAME% \/bsd: midi0 at pcppi0: <PC speaker>
+%DATE% %HOSTNAME% \/bsd: spkr0 at pcppi0
+%DATE% %HOSTNAME% \/bsd: sysbeep0 at pcppi0
+%DATE% %HOSTNAME% \/bsd: lpt0 at isa0 port 0x378\/4 irq 7
+%DATE% %HOSTNAME% \/bsd: npx0 at isa0 port 0xf0\/16: using exception 16
+%DATE% %HOSTNAME% \/bsd: pccom0 at isa0 port 0x3f8\/8 irq 4: ns16550a, 16 byte fifo
+%DATE% %HOSTNAME% \/bsd: fdc0 at isa0 port 0x3f0\/6 irq 6 drq 2
+%DATE% %HOSTNAME% \/bsd: fd0 at fdc0 drive 0: 1\.44MB 80 cyl, 2 head, 18 sec
+%DATE% %HOSTNAME% \/bsd: biomask 0 netmask 0 ttymask 0
+%DATE% %HOSTNAME% \/bsd: ioapic0: pin 11 shares different IPL interrupts \(40\.\.50\), degraded performance
+%DATE% %HOSTNAME% \/bsd: pctr: 686-class user-level performance counters enabled
+%DATE% %HOSTNAME% \/bsd: mtrr: Pentium Pro MTRR support
+%DATE% %HOSTNAME% \/bsd: apm0: disconnected
+%DATE% %HOSTNAME% \/bsd: dkcsum: wd0 matched BIOS disk 80
+%DATE% %HOSTNAME% \/bsd: root on wd0a
+%DATE% %HOSTNAME% \/bsd: rootdev=0x0 rrootdev=0x300 rawdev=0x302
+%DATE% %HOSTNAME% \/bsd: pckbc0: using irq [0-9]+ for aux slot
+%DATE% %HOSTNAME% \/bsd: pmsi0 at pckbc0 \(aux slot\)
+%DATE% %HOSTNAME% \/bsd: wsmouse0 at pmsi0 mux 0
+
+^%DATE% %HOSTNAME% cron%PID%: \(CRON\) STARTUP \(V5\.0\)
+^%DATE% %HOSTNAME% cron%PID%: \(root\) CMD \(/bin/sh /etc/(daily|weekly|monthly) 2>&1 | tee /var/log/(daily|weekly|monthly).out | mail -s "`/bin/hostname` (daily|weekly|monthly) output" root\)
+^%DATE% %HOSTNAME% cron%PID%: \(root\) CMD \(\/usr\/bin\/newsyslog\)
+^%DATE% %HOSTNAME% cron%PID%: \(root\) CMD \(\/usr\/sbin\/sendmail -L sm-msp-queue -Ac -q\)
+
+^%DATE% %HOSTNAME% dhclient%PID%: bound to %IPv4% -- renewal in [0-9]+ seconds\.
+^%DATE% %HOSTNAME% dhclient%PID%: (connection closed|exiting\.)
+^%DATE% %HOSTNAME% dhclient%PID%: DHCPACK from %IPv4%
+^%DATE% %HOSTNAME% dhclient%PID%: DHCPREQUEST on [^ ]+ to %IPv4% port 67
+
+^%DATE% %HOSTNAME% last message repeated [0-9]+ times
+
+^%DATE% %HOSTNAME% newsyslog%PID%: logfile turned over
+
+^%DATE% %HOSTNAME% pflogd%PID%: \[priv\]: msg PRIV_OPEN_LOG received
+
+^%DATE% %HOSTNAME% savecore: no core dump
+
+^%DATE% %HOSTNAME% sendmail%PID%: [0-9a-zA-Z]+: from=[^ ]*, size=[0-9]+, class=0, nrcpts=[0-9]+, msgid=[^,]*, relay=[^ ]*
+^%DATE% %HOSTNAME% sendmail%PID%: [0-9a-zA-Z]+: from=[^ ]*, size=[0-9]+, class=0, nrcpts=[0-9]+, msgid=[^,]*, proto=ESMTP, daemon=MTA, relay=([^ ]+ |)%IPv4%
+^%DATE% %HOSTNAME% sendmail%PID%: [0-9a-zA-Z]+: to=[^ ]*, ctladdr=[^ ]+ \([0-9]+\/[0-9]+\), delay=[0-9:]+, xdelay=[0-9:]+, mailer=relay, pri=[0-9]+, relay=\[127\.0\.0\.1\] \[127\.0\.0\.1\], dsn=2\.0\.0, stat=Sent \([0-9a-zA-Z]+ Message accepted for delivery\)
+
+^%DATE% %HOSTNAME% sm-mta%PID%: [0-9a-zA-Z]+: from=[^ ]*, size=[0-9]+, class=0, nrcpts=[0-9]+, (|msgid=[^,]*, )proto=ESMTP, daemon=MTA, relay=(smmsp@|)localhost[^ ]* \[127\.0\.0\.1\]
+^%DATE% %HOSTNAME% sm-mta%PID%: [0-9a-zA-Z]+: to=[^ ]+, ctladdr=[^ ]+ \([0-9]+/[0-9]+\), delay=[0-9:]+, xdelay=[0-9:]+, mailer=local, pri=[0-9]+, dsn=2\.0\.0, stat=Sent
+^%DATE% %HOSTNAME% sm-mta%PID%: [0-9a-zA-Z]+: to=[^ ]+, ctladdr=[^ ]+ \([0-9]+/[0-9]+\), delay=[0-9:]+, xdelay=[0-9:]+, mailer=(esmtp|relay), pri=[0-9]+, relay=[^ ]+ \[%IPv4%\], dsn=2\.0\.0, stat=Sent
+^%DATE% %HOSTNAME% sm-mta%PID%: starting daemon \(8\.13\.[34]\): SMTP\+queueing@[0-9:]+
+
+^%DATE% %HOSTNAME% syslogd: restart

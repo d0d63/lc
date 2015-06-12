@@ -1,0 +1,10 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-rcd.lcc,v 1.2 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME%.* com\.apple\.launchd%PID% \(0x%HEX%\.rcd%PID%\): Exited with exit code: 1$
+
+^%DATE% %HOSTNAME%.* rcd%PID%.* CGSDisplayServerShutdown: Detaching display subsystem from window server$
+^%DATE% %HOSTNAME%.* rcd%PID%.* CGSShutdownServerConnections: Detaching application from window server$
+^%DATE% %HOSTNAME%.* rcd%PID%.* kCGErrorRangeCheck : On-demand launch of the Window Server is allowed for root user only\.$
+^%DATE% %HOSTNAME%.* rcd%PID%.* kCGErrorRangeCheck : Set a breakpoint at CGErrorBreakpoint\(\) to catch errors as they are returned$

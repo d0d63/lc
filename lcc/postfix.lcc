@@ -1,0 +1,36 @@
+# Copyright (c) 2005, 2006, 2007, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: postfix.lcc,v 1.15 2010/01/05 03:04:37 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% postfix\/anvil%PID%: statistics: max cache size %INT% at .*$
+^%DATE% %HOSTNAME% postfix\/anvil%PID%: statistics: max connection count %INT% for \(smtp:%IP%\) at .*$
+^%DATE% %HOSTNAME% postfix\/anvil%PID%: statistics: max connection rate %INT%/60s for \(smtp:%IP%\) at .*$
+
+^%DATE% %HOSTNAME% postfix\/cleanup%PID%: [0-9A-F]+: (resent-m|m)essage-id=
+
+^%DATE% %HOSTNAME% postfix\/local%PID%: [0-9A-F]+: to=[^ ]+, (|orig_to=[^ ]+, )relay=local, delay=(%INT%|%FLOAT%), (|delays=([0-9\.\/]+), )(|dsn=[0-9\.]+, )status=sent \(.*\)$
+
+^%DATE% %HOSTNAME% postfix\/pickup%PID%: [0-9A-F]+: uid=[0-9]+ from=
+
+^%DATE% %HOSTNAME% postfix\/postfix-script: fatal: the Postfix mail system is already running
+^%DATE% %HOSTNAME% postfix\/postfix-script: fatal: usage: postfix start \(or stop, reload, abort, flush, check, set-permissions, upgrade-configuration\)
+
+^%DATE% %HOSTNAME% postfix\/qmgr%PID%: [0-9A-F]+: from=[^, ]+, size=[0-9]+, nrcpt=[0-9]+ \(queue active\)
+^%DATE% %HOSTNAME% postfix\/qmgr%PID%: [0-9A-F]+: removed
+^%DATE% %HOSTNAME% postfix\/qmgr%PID%: [0-9A-F]+: skipped, still being delivered$
+
+^%DATE% %HOSTNAME% postfix\/scache%PID%: statistics: ((address|domain) lookup hits=[0-9]+ miss=[0-9]+ success=[0-9]+%|start interval )
+^%DATE% %HOSTNAME% postfix\/scache%PID%: statistics: max simultaneous domains=[0-9]+ addresses=[0-9]+ connection=[0-9]+
+
+^%DATE% %HOSTNAME% postfix\/smtp%PID%: [0-9A-F]+: to=[^ ]+, (|orig_to=[^ ]+, )relay=[^ ]*\[%IP%\](|:25), delay=(%INT%|%FLOAT%), (|delays=([0-9\.\/]+), )(|dsn=[0-9\.]+, )status=sent \(250 
+^%DATE% %HOSTNAME% postfix\/smtp%PID%: connect to .*\[%IP%\]: Operation timed out \(port 25\)$
+^%DATE% %HOSTNAME% postfix\/smtp%PID%: connect to .*\[%IP%\]:%INT%: Operation timed out$
+^%DATE% %HOSTNAME% postfix\/smtp%PID%: (|server )certificate verification failed for .*:.*$
+^%DATE% %HOSTNAME% postfix\/smtp%PID%: Host offered STARTTLS: \[.*\]$
+
+^%DATE% %HOSTNAME% postfix\/smtpd%PID%: [0-9A-F]+: client=[^ ]*\[%IP%\]
+^%DATE% %HOSTNAME% postfix\/smtpd%PID%: (connect|disconnect) from [^ ]*\[(%IP%|unknown)\]
+^%DATE% %HOSTNAME% postfix\/smtpd%PID%: (lost connection|timeout|too many errors) after (CONNECT|RCPT|QUIT) from [^ ]*\[(%IP%|unknown)\]
+^%DATE% %HOSTNAME% postfix\/smtpd%PID%: warning: %IP%: hostname .* verification failed: non-recoverable failure in name resolution$
+^%DATE% %HOSTNAME% postfix\/smtpd%PID%: warning: dict_nis_init: NIS domain name not set - NIS lookups disabled
+^%DATE% %HOSTNAME% postfix\/smtpd%PID%: warning: numeric hostname: %IP%$

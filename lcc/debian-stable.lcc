@@ -1,0 +1,52 @@
+# Copyright (c) 2005, 2006, 2007, 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: debian-stable.lcc,v 1.6 2013/12/17 14:22:24 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% -- MARK --$
+^%DATE% %HOSTNAME% last message repeated [0-9]+ times$
+
+^%DATE% %HOSTNAME% acpid: client connected from %INT%\[0:0\][ \t]*$
+
+^%DATE% %HOSTNAME% anacron%PID%: Anacron 2\.3 started on 20[0-9][0-9]-[01][0-9]-[0123][0-9]$
+^%DATE% %HOSTNAME% anacron%PID%: Job \`cron.(daily|weekly|monthly)' started$
+^%DATE% %HOSTNAME% anacron%PID%: Job \`cron.(weekly|monthly)' terminated$
+^%DATE% %HOSTNAME% anacron%PID%: Job \`cron\.daily\' terminated \(exit status: 1\) \(mailing output\)$
+^%DATE% %HOSTNAME% anacron%PID%: Jobs will be executed sequentially$
+^%DATE% %HOSTNAME% anacron%PID%: Normal exit \(%INT% job(|s) run\)$
+^%DATE% %HOSTNAME% anacron%PID%: Updated timestamp for job \`cron\.(daily|weekly|monthly)\' to 20[0-9][0-9]-[01][0-9]-[0123][0-9]$
+^%DATE% %HOSTNAME% anacron%PID%: Will run job \`cron\.daily\' in 5 min\.$
+^%DATE% %HOSTNAME% anacron%PID%: Will run job \`cron\.weekly\' in 10 min\.$
+^%DATE% %HOSTNAME% anacron%PID%: Will run job \`cron\.monthly\' in 15 min\.$
+
+^%DATE% %HOSTNAME% CRON%PID%: \(pam_unix\) session closed for user root$
+^%DATE% %HOSTNAME% CRON%PID%: \(pam_unix\) session opened for user root by \(uid=0\)$
+^%DATE% %HOSTNAME% CRON%PID%: pam_unix\(cron:session\): session closed for user root$
+^%DATE% %HOSTNAME% CRON%PID%: pam_unix\(cron:session\): session opened for user root by \(uid=0\)$
+^%DATE% %HOSTNAME% /USR/SBIN/CRON%PID%: \(root\) CMD \(   cd / \&\& run-parts --report /etc/cron.hourly\)$
+^%DATE% %HOSTNAME% /USR/SBIN/CRON%PID%: \(root\) CMD \(   \[ -x /usr/lib/php5/maxlifetime \] && \[ -d /var/lib/php5 \] && find /var/lib/php5/ -type f -cmin \+\$\(/usr/lib/php5/maxlifetime\) -print0 \| xargs -n 200 -r -0 rm\)$
+^%DATE% %HOSTNAME% /USR/SBIN/CRON%PID%: \(root\) CMD \([ \t]*\[ -x /usr/lib/php5/maxlifetime \] && \[ -d /var/lib/php5 \] && find /var/lib/php5/ -type f -cmin \+\$\(/usr/lib/php5/maxlifetime\) -print0 \| xargs -n 200 -r -0 rm\)$
+^%DATE% %HOSTNAME% /USR/SBIN/CRON%PID%: \(root\) CMD \(\[ -x /usr/lib/sysstat/sa1 \] \&\& \{ \[ -r \"\$DEFAULT\" \] \&\& . \"\$DEFAULT\" ; \[ \"\$ENABLED\" = \"true\" \] \&\& exec /usr/lib/sysstat/sa1 \$SA1_OPTIONS 1 1 ; }\)$
+^%DATE% %HOSTNAME% /USR/SBIN/CRON%PID%: \(root\) CMD \(\[ -x /usr/lib/sysstat/sa1 \] \&\& \{ \[ -r \"\$DEFAULT\" \] \&\& . \"\$DEFAULT\" ; \[ \"\$ENABLED\" = \"true\" \] \&\& exec /usr/lib/sysstat/sa1 \$SA1_OPTIONS 60 2 ; }\)$
+^%DATE% %HOSTNAME% /USR/SBIN/CRON%PID%: \(root\) CMD \(command -v debian-sa1 > /dev/null && debian-sa1 1 1\)$
+^%DATE% %HOSTNAME% /USR/SBIN/CRON%PID%: \(root\) CMD \(command -v debian-sa1 > /dev/null && debian-sa1 60 2\)$
+^%DATE% %HOSTNAME% /USR/SBIN/CRON%PID%: \(root\) CMD \(test -x /etc/init\.d/anacron && /usr/sbin/invoke-rc\.d anacron start >/dev/null\)$
+^%DATE% %HOSTNAME% /USR/SBIN/CRON%PID%: \(root\) CMD \(test -x /usr/sbin/anacron \|\| \( cd / \&\& run-parts --report /etc/cron.(daily|weekly|monthly) \)\)
+
+^%DATE% %HOSTNAME% rsyslogd: \[origin software=\"rsyslogd\" swVersion=\"4\.6\.4\" x-pid=\"%INT%\" x-info=\"http://www.rsyslog\.com\"\] rsyslogd was HUPed, type \'lightweight\'\.$
+^%DATE% %HOSTNAME% rsyslogd: \[origin software=\"rsyslogd\" swVersion=\"5\.8\.11\" x-pid=\"%INT%\" x-info=\"http://www\.rsyslog\.com\"\] rsyslogd was HUPed$
+
+^%DATE% %HOSTNAME% sshd%PID%: pam_unix\(ssh:session\): session closed for user %USERS%
+^%DATE% %HOSTNAME% sshd%PID%: pam_unix\(ssh:session\): session opened for user %USERS% by \(uid=0\)$
+^%DATE% %HOSTNAME% sshd%PID%: pam_unix\(sshd:session\): session closed for user %USERS%
+^%DATE% %HOSTNAME% sshd%PID%: pam_unix\(sshd:session\): session opened for user %USERS% by \(uid=0\)$
+
+^%DATE% %HOSTNAME% su%PID%: \+ \?\?\? root:nobody$
+^%DATE% %HOSTNAME% su%PID%: \(pam_unix\) session closed for user nobody$
+^%DATE% %HOSTNAME% su%PID%: \(pam_unix\) session opened for user nobody by \(uid=0\)$
+^%DATE% %HOSTNAME% su%PID%: pam_unix\(su:session\): session closed for user nobody$
+^%DATE% %HOSTNAME% su%PID%: pam_unix\(su:session\): session opened for user nobody by \(uid=0\)$
+^%DATE% %HOSTNAME% su%PID%: Successful su for nobody by root$
+
+^%DATE% %HOSTNAME% syslogd 1\.4\.1#18: restart\.$
+^%DATE% %HOSTNAME% syslogd 1\.5\.0#5: restart\.$
+^%DATE% %HOSTNAME% syslogd 1\.5\.0#6: restart\.$

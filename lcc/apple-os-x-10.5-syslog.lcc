@@ -1,0 +1,7 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-syslog.lcc,v 1.2 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE%: --- last message repeated %INT% (time|times) ---$
+
+^%DATE% %HOSTNAME% newsyslog%PID%: logfile turned over$

@@ -1,0 +1,22 @@
+# Copyright (c) 2007, 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: openvpn.lcc,v 1.9 2010/01/05 03:04:37 dodge Exp $ 
+# vim: tw=0
+
+^%DATE% %HOSTNAME% openvpn%PID%: %IP%:%INT% \[%OPENVPN_CLIENTS%\] Peer Connection Initiated with %IP%:%INT%$
+^%DATE% %HOSTNAME% openvpn%PID%: %IP%:%INT% Re-using SSL/TLS context$
+^%DATE% %HOSTNAME% openvpn%PID%: \[%OPENVPN_SERVERS%\] Inactivity timeout \(--ping-restart\), restarting$
+^%DATE% %HOSTNAME% openvpn%PID%: \[%OPENVPN_SERVERS%\] Peer Connection Initiated with %IP%:1194$
+^%DATE% %HOSTNAME% openvpn%PID%: /sbin/ifconfig tun0 delete$
+^%DATE% %HOSTNAME% openvpn%PID%: /sbin/ifconfig tun0 %IP% %IP% mtu %INT% netmask %IP% up$
+^%DATE% %HOSTNAME% openvpn%PID%: Attempting to establish TCP connection with %IP%:1194$
+^%DATE% %HOSTNAME% openvpn%PID%: gw %IP%$
+^%DATE% %HOSTNAME% openvpn%PID%: Initialization Sequence Completed$
+^%DATE% %HOSTNAME% openvpn%PID%: NOTE: Tried to delete pre-existing tun/tap instance -- No Problem if failure$
+^%DATE% %HOSTNAME% openvpn%PID%: OpenVPN 2\.0\.9 .* \[SSL\] built on .*$
+^%DATE% %HOSTNAME% openvpn%PID%: TCP connection established with %IP%:1194$
+^%DATE% %HOSTNAME% openvpn%PID%: TCP/UDP: Dynamic remote address changed during TCP connection establishment$
+^%DATE% %HOSTNAME% openvpn%PID%: TCPv4_CLIENT link local: \[undef\]$
+^%DATE% %HOSTNAME% openvpn%PID%: TCPv4_CLIENT link remote: %IP%:1194$
+^%DATE% %HOSTNAME% openvpn%PID%: TUN/TAP device /dev/tun0 opened$
+^%DATE% %HOSTNAME% openvpn%PID%: UDPv4 link local: \[undef\]$
+^%DATE% %HOSTNAME% openvpn%PID%: UDPv4 link remote: %IP%:1194$

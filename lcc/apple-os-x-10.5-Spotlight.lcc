@@ -1,0 +1,14 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-Spotlight.lcc,v 1.3 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% mds%PID%: \(/\.Spotlight-V100/Store-V1/Stores/%HEX%-%HEX%-%HEX%-%HEX%-%HEX%\)\(Error\) IndexCI in ContentIndexOpenBulk:Unclean shutdown of .*; needs recovery$
+
+^%DATE% %HOSTNAME%.*Spotlight%PID%.*: CGSShutdownServerConnections: Detaching application from window server$
+
+^%DATE% %HOSTNAME% Spotlight%PID%: -\[MDMenuWindow _checkTopRight\] the window is off the screen topRight point is \{%INT%, %INT%\}$
+^%DATE% %HOSTNAME% Spotlight%PID%: be in the preview loader if you already have the icon 3$
+^%DATE% %HOSTNAME% Spotlight%PID%: Invalid kMDItemPath for .*$
+
+^%DATE% %HOSTNAME% _spotlight%PID%: 0 Install Scripts run\.$
+^%DATE% %HOSTNAME% _spotlight%PID%: Running Install Scripts \. \. \.$

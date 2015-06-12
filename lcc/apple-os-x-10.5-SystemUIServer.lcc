@@ -1,0 +1,15 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-SystemUIServer.lcc,v 1.4 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME%.* \[0x0-0x%HEX%\]\.com\.apple\.systemuiserver%PID%: DigiHub:sendChargingCommandToDevice  RequestExtraPower\(kUSBPowerDuringWake\) returned (0|500)$
+^%DATE% %HOSTNAME%.* \[0x0-0x%HEX%\]\.com\.apple\.systemuiserver%PID%: DigiHub:sendChargingCommandToDevice   sending command with sleep: 0, wake (0|500)$
+
+^%DATE% %HOSTNAME%.* com\.apple\.launchd%PID% \(\[0x0-0x%HEX%\]\.com\.apple\.systemuiserver%PID%\): Exited: Terminated$
+
+^%DATE% %HOSTNAME%.* /System/Library/CoreServices/SystemUIServer\.app/Contents/MacOS/SystemUIServer%PID%: (CPSGetProcessInfo|CPSPBGetProcessInfo)\(\): This call is deprecated and should not be called anymore\.$
+
+^%DATE% %HOSTNAME%.* SystemUIServer%PID%.*: Cannot find function pointer IOUSBLibFactory for factory 4547A8AA-9EF3-11D4-A9BD-000A27052861 in CFBundle/CFPlugIn 0x53b2d0 </System/Library/Extensions/IOUSBFamily\.kext/Contents/PlugIns/IOUSBLib\.bundle> \(bundle, not loaded\)$
+^%DATE% %HOSTNAME%.* SystemUIServer%PID%.*: CGSShutdownServerConnections: Detaching application from window server$
+^%DATE% %HOSTNAME%.* SystemUIServer%PID%.*: Error: ACNetworkCopyBroadcastScanResults\(\) called with invalid interface$
+^%DATE% %HOSTNAME%.* SystemUIServer%PID%.*: found device$

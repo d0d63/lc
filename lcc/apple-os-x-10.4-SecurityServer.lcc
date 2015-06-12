@@ -1,0 +1,10 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.4-SecurityServer.lcc,v 1.2 2010/01/05 03:01:38 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% com\.apple\.SecurityServer: authinternal authenticated user %USERS% \(uid %INT%\)\.$
+^%DATE% %HOSTNAME% com\.apple\.SecurityServer: Entering service$
+^%DATE% %HOSTNAME% com\.apple\.SecurityServer: Succeeded authorizing right system\.login\.console by process /System/Library/CoreServices/loginwindow\.app for authorization created by /System/Library/CoreServices/loginwindow\.app\.$
+^%DATE% %HOSTNAME% com\.apple\.SecurityServer: Succeeded authorizing right system\.login\.done by process /System/Library/CoreServices/loginwindow\.app for authorization created by /System/Library/CoreServices/loginwindow\.app\.$
+^%DATE% %HOSTNAME% com\.apple\.SecurityServer: Succeeded authorizing right system\.login\.screensaver by process /System/Library/CoreServices/loginwindow.app for authorization created by /System/Library/CoreServices/loginwindow\.app\.$
+^%DATE% %HOSTNAME% com\.apple\.SecurityServer: uid %INT% succeeded authenticating as user %USERS% \(uid %INT%\) for right system\.login\.screensaver\.$

@@ -1,0 +1,22 @@
+# Copyright (c) 2007 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.6.macro,v 1.1 2012/01/07 16:12:28 dodge Exp $
+# vim: tw=0
+
+%BEZELUISERVER% (BezelUIServer|com.apple.BezelUIServer\[[0-9]+\]: .* BezelUIServer)\[[0-9]+\](| <Warning>):
+
+%DASHBOARD% (DashboardClient|dashboardadvisoryd|com\.apple\.Dock\.agent\[[0-9]+\]: [0-9- :\.]+ DashboardClient)\[[0-9]+(|:[a-f0-9]+)\](|:)
+
+%DOCK% (com\.apple\.Dock\.agent|Dock|DockSyncClient)\[[0-9]+\]:
+
+%FINDER% (/System/Library/CoreServices/Finder\.app/Contents/MacOS/Finder|Finder)\[[0-9]+\]:
+
+%ITUNES% (iTunes|iTunesHelper|/Applications/iTunes.app/Contents/MacOS/iTunes)
+
+%KEXTD% (kextd|com\.apple\.kextd)
+
+%LOGINWINDOW% (com\.apple\.loginwindow\[[0-9]+\]: .* .* loginwindow\[[0-9]+\]|loginwindow\[[0-9]+\]:)
+
+%SMB% (/Applications/iTunes\.app/Contents/MacOS/iTunes|/Applications/TextEdit.app/Contents/MacOS/TextEdit|/Applications/LibreOffice.app/Contents/MacOS/soffice|/System/Library/CoreServices/Finder.app/Contents/MacOS/Finder|/System/Library/CoreServices/NetAuthAgent.app/Contents/MacOS/NetAuthAgent)\[[0-9]+\]:
+
+%SOFTWARE_UPDATE% (Software Update|SoftwareUpdateCheck|/System/Library/CoreServices/Software Update\.app/Contents/MacOS/Software Update)\[[0-9]+\]:
+

@@ -1,0 +1,17 @@
+# Copyright (c) 2005, 2006, 2007, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: named.lcc,v 1.7 2010/01/05 03:04:37 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% named%PID%: Binding locally$
+^%DATE% %HOSTNAME% named%PID%: client %DNS_MASTER_SLAVES%#%INT%: transfer of \'%DNS_MASTER_ZONES%/IN\': (AXFR|AXFR-style IXFR|IXFR) (ended|started)$
+^%DATE% %HOSTNAME% named%PID%: client %DNS_SLAVE_MASTERS%#%INT%: received notify for zone \'%DNS_SLAVE_ZONES%\'$
+^%DATE% %HOSTNAME% named%PID%: lame server resolving \'.*\' \(in \'.*\'?\): %IP%#53$
+^%DATE% %HOSTNAME% named%PID%: transfer of \'%DNS_SLAVE_ZONES%/IN\' from %DNS_SLAVE_MASTERS%#53: end of transfer$
+^%DATE% %HOSTNAME% named%PID%: transfer of \'%DNS_SLAVE_ZONES%/IN\' from %DNS_SLAVE_MASTERS%#53: (connected using %IP%#%INT%|end of transfer)$
+^%DATE% %HOSTNAME% named%PID%: unexpected RCODE \((REFUSED|SERVFAIL)\) resolving \'.*\': %IP%#53$
+^%DATE% %HOSTNAME% named%PID%: unexpected RCODE \(15\) resolving \'.*\': %IP%#53$
+^%DATE% %HOSTNAME% named%PID%: zone %DNS_MASTER_ZONES%/IN: loaded serial %INT%$
+^%DATE% %HOSTNAME% named%PID%: zone %DNS_MASTER_ZONES%/IN: sending notifies \(serial %INT%\)$
+^%DATE% %HOSTNAME% named%PID%: zone %DNS_SLAVE_ZONES%/IN: sending notifies \(serial %INT%\)$
+^%DATE% %HOSTNAME% named%PID%: zone %DNS_SLAVE_ZONES%/IN: Transfer started\.$
+^%DATE% %HOSTNAME% named%PID%: zone %DNS_SLAVE_ZONES%/IN: transferred serial %INT%$

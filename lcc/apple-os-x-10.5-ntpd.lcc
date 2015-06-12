@@ -1,0 +1,8 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-ntpd.lcc,v 1.5 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME%.* ntpd%PID%: ntpd 4\.2\.2@1\.1532-o Tue Dec 23 20:22:19 UTC 2008 \(1\)$
+^%DATE% %HOSTNAME%.* ntpd%PID%: ntpd 4\.2\.2@1\.1532-o Thu Feb  5 07:51:23 UTC 2009 \(1\)$
+
+^%DATE% %HOSTNAME%.* ntpdate%PID%: ntpdate 4\.2\.2@1\.1532-o .* \(1\)$

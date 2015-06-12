@@ -1,0 +1,17 @@
+# Copyright (c) 2013 M. Dodge Mumford. All rights reserved.
+# $dodge: mfs.lcc,v 1.4 2013/12/19 14:38:23 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% mfschunkserver%PID%: testing chunk: /mfs/chunks(|/[abc])/%HEX%/chunk_%HEX%_%HEX%\.mfs$
+
+^%DATE% %HOSTNAME% mfsmetalogger%PID%: changelog_[01] downloaded %INT%B/%FLOAT%s \(%FLOAT% MB/s\)$
+^%DATE% %HOSTNAME% mfsmetalogger%PID%: metadata downloaded %INT%B/%FLOAT%s \(%FLOAT% MB/s\)$
+^%DATE% %HOSTNAME% mfsmetalogger%PID%: sessions downloaded %INT%B/%FLOAT%s \(%FLOAT% MB/s\)$
+
+^%DATE% %HOSTNAME% mfsmaster%PID%: chunkserver register - ip: 10\.1\.1\.4, port: 9422, usedspace: %INT% \(%FLOAT% GiB\), totalspace: %INT% \(%FLOAT% GiB\)$
+^%DATE% %HOSTNAME% mfsmaster%PID%: chunkservers status:[ \t]*$
+^%DATE% %HOSTNAME% mfsmaster%PID%: last message repeated %INT% times$
+^%DATE% %HOSTNAME% mfsmaster%PID%: register packet version: 4$
+^%DATE% %HOSTNAME% mfsmaster%PID%: server %INT% \(ip: %IP%, port: 9422\): usedspace: %INT% \(%FLOAT% GiB\), totalspace: %INT% \(%FLOAT% GiB\), usage: %FLOAT%.$
+^%DATE% %HOSTNAME% mfsmaster%PID%: structure check loop$
+^%DATE% %HOSTNAME% mfsmaster%PID%: total: usedspace: %INT% \(%FLOAT% GiB\), totalspace: %INT% \(%FLOAT% GiB\), usage: %FLOAT%.$

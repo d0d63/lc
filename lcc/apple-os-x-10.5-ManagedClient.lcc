@@ -1,0 +1,16 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-ManagedClient.lcc,v 1.2 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME%.* /System/Library/CoreServices/ManagedClient.app/Contents/MacOS/ManagedClient%PID%: GetOurLSSessionIDInit\(\), returned error 0x1, securitySessionID=0x0 attrs=0 uid=0 euid=0\.  cf Radar 5123589\.$
+^%DATE% %HOSTNAME%.* /System/Library/CoreServices/ManagedClient.app/Contents/MacOS/ManagedClient%PID%: LaunchServices/5123589: Unable to lookup coreservices session port for session 0x0 uid=0 euid=0$
+^%DATE% %HOSTNAME%.* /System/Library/CoreServices/ManagedClient.app/Contents/MacOS/ManagedClient%PID%: ManagedClient- runloop could not be started; status = -2$
+^%DATE% %HOSTNAME%.* /System/Library/CoreServices/ManagedClient.app/Contents/MacOS/ManagedClient%PID%: MCXD\.doPostComposite:\[ODNode nodeWithSession: type:kODTypeLocalNode \] == -14270 \(Unable to open Directory node with type 8704\.\)$
+^%DATE% %HOSTNAME%.* /System/Library/CoreServices/ManagedClient.app/Contents/MacOS/ManagedClient%PID%: MCXD_StartMCX Unable to create the connection$
+^%DATE% %HOSTNAME%.* /System/Library/CoreServices/ManagedClient.app/Contents/MacOS/ManagedClient%PID%: SessionGetInfo\(0xffffffff\) -> Mach 268435459$
+
+^%DATE% %HOSTNAME%.* ManagedClient%PID%: CGSDisplayServerShutdown: Detaching display subsystem from window server$
+^%DATE% %HOSTNAME%.* ManagedClient%PID%: CGSShutdownServerConnections: Detaching application from window server$
+^%DATE% %HOSTNAME%.* ManagedClient%PID%: HIToolbox: received notification of WindowServer event port death\.$
+^%DATE% %HOSTNAME%.* ManagedClient%PID%: port matched the WindowServer port created in BindCGSToRunLoop$
+

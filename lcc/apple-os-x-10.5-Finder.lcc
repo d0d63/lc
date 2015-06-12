@@ -1,0 +1,10 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-Finder.lcc,v 1.2 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME%.*Finder%PID%.*: CGSShutdownServerConnections: Detaching application from window server$
+
+^%DATE% %HOSTNAME% /System/Library/CoreServices/Finder\.app/Contents/MacOS/Finder%PID%: Allocator race detected: transaction is not verified for -103/2 - backward Inches\.rbt$
+^%DATE% %HOSTNAME% /System/Library/CoreServices/Finder\.app/Contents/MacOS/Finder%PID%: Allocator race detected: transaction is not verified for -103/2 - Forward Inches\.rbt$
+^%DATE% %HOSTNAME% /System/Library/CoreServices/Finder\.app/Contents/MacOS/Finder%PID%: (CPSGetProcessInfo|CPSPBGetProcessInfo)\(\): This call is deprecated and should not be called anymore\.$
+^%DATE% %HOSTNAME% /System/Library/CoreServices/Finder\.app/Contents/MacOS/Finder%PID%: StatusMonitor::volumesChangedCallBack returned -47$

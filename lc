@@ -1,0 +1,140 @@
+#!/usr/bin/perl
+# vim: tw=0
+# Copyright (c) 2005, 2006, 2007, 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: lc,v 1.24 2010/01/05 02:40:32 dodge Exp $
+
+$LCC_DIR = './lcc/';		# Where the .lcc files are
+
+
+###############################################################################
+# You probably shouldn't modify stuff below this point
+###############################################################################
+
+foreach $filename (`ls ${LCC_DIR}/*.squish`) {
+	open(FD, "<${filename}") || print("Can't open ${filename}: $!\n");
+	while(<FD>) {
+		$line = $_;
+		chop($line);
+		if (substr($line, 0, 1) eq "#") {
+			# Comment to keep it readable
+		} elsif (length($line) > 0) {
+			@squish = (@squish, $line);
+		}
+	}
+}
+
+foreach $filename (`ls ${LCC_DIR}/*.macro`) {
+	open(FD, "<${filename}") || print("Can't open ${filename}: $!\n");
+	while(<FD>) {
+		$line = $_;
+		chop($line);
+		if (substr($line, 0, 1) eq "#") {
+			# Comment
+		} else {
+			for ($i = 0; $i < length($line); $i++) {
+				$c = substr($line, $i, 1);
+				if ($c eq " ") {
+					$key = substr($line, 0, $i);
+					$value = substr($line, $i + 1);
+					$macros{$key} = $value;
+					$line = "";
+					break;
+				} elsif ($c eq "\\") {
+					$i = $i + 1;
+				}
+			}
+		}
+	}
+}
+
+$line_num = 0;
+foreach $filename (`ls ${LCC_DIR}/*.lcc`) {
+	open(FD, "<${filename}") || print("Can't open ${filename}: $!\n");
+	while (<FD>) {
+		chop;
+		if ($_ !~ /^#/ && $_ !~ /^$/) {
+			$ok[$line_num++] = $_;
+		}
+	}
+	close(FD);
+}
+
+$big_ok = "(";
+
+# glom all the regexes in @ok into one big-ass regex. It goes faster that way.
+foreach $r (@ok) {
+	$new_r = "";
+	for ($i = 0; $i < length($r); $i++) {
+		$remainder = substr($r, $i);
+		$first_char = substr($remainder, 0, 1);
+		if ($first_char eq "%") {
+			if (substr($remainder, 0, 2) eq "\%\%") {
+				$i++;
+			} else {
+				foreach $m (keys(%macros)) {
+					if ($remainder =~ /^$m/) {
+						$new_r .= $macros{$m};
+						$i += length($m) - 1;
+					}
+				}
+			}
+		} else {
+			$new_r .= $first_char;
+		}
+	}
+
+	if ($big_ok eq "(") {
+		$big_ok .= $new_r;
+	} else {
+		$big_ok .= "|$new_r";
+	}
+}
+$big_ok .= ")";
+
+foreach $file (@ARGV) {
+	if ($file =~ /\.gz$/) {
+		open(FD, "gzip -cd $file|");
+	} elsif ($file =~ /\.bz2/) {
+		open(FD, "bzip2 -cd $file|");
+	} else {
+		open(FD, "<$file");
+	}
+	while (<FD>) {
+		chop;
+		checkline($_);
+	}
+	close(FD);
+}
+
+foreach $s (keys(%squished)) {
+	printf("	Squished %d items about %s\n", $squished{$s}, $s);
+}
+
+sub checkline {
+	$line = @_[0];
+	$bad = 1;
+	if ($line !~ /$big_ok/) {
+		$key = "";
+		$ok_to_print = 1;
+		foreach $re (@squish) {
+			$k = $line;
+			$k =~ s/$re/$1 $2 $3 $4/;
+
+			if ($k ne $line) {
+				# regex matched, $k is now the key
+				$key = $k;
+			}
+		}
+
+		if ($key) {
+			if ($squished{$key}) {
+				$ok_to_print = 0;
+			}
+			$squished{$key}++;
+		}
+
+		if ($ok_to_print) {
+			print("$line\n");
+		}
+	}
+}

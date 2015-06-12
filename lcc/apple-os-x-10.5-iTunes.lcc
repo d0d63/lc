@@ -1,0 +1,59 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-iTunes.lcc,v 1.4 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*(\{|\()$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*(\)|\})(|,|;)$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*[0-9a-f ]+>;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Build Version\" = 7A400;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Build Version\" = 7A341;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Build Version\" = 7D11;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Calendar Day Limit\" = 0;
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Calendars Collections\" =         \($
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Data Class Info\" =         \($
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Device Name\" = \".*\";$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Display Name\" = \".*\";$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"IC-Info\.(sidb|sidv)\" = <[0-9a-f ]+(|>;)$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"iTunes Files\" =     \{$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"iTunes Version\" = \"8\.2\.1\";$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"iTunes Version\" = \"9\.0\.2\";$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"iTunesPrefs\.plist\" = <[0-9a-f ]+(|>;)$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Last Backup Date\" = [0-9-: ]+;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"New Record Calendar Name\" = Home;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Phone Number\" = \"[0-9\(\) -]+\";$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Product\ Type\" = \"iPhone1,1\";$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Product\ Type\" = \"iPhone2,1\";$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Product\ Version\" = \"[0-9\.]+\";$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Serial Number\" = [0-9A-Z]+;
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Sync Settings\" =     \{$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Target Identifier\" = %HEX%;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Target Identifier\" = \"[0-9a-f-]+\";$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Target Type\" = Device;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*\"Unique Identifier\" = %HEX%;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*AMSCollectionDisplayName = .*;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*AMSCollectionFiltered = 0;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*AMSCollectionName = .*;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*AMSCollectionReadOnly = 0;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*GUID = %HEX%;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*ICCID = %INT%;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*IMEI = %INT%;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*Info: \{$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*iPhotoAlbumPrefs = <[0-9a-f ]+>;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*iTunesApplicationIDs = <[0-9a-f ]+>;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*iTunesPlaylists = <[0-9a-f ]+(|>;)$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*iTunesPrefs = <[0-9a-f ]+>;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*iTunesTVShows = <[0-9a-f ]+>;$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*kAMSDataClassEnabled = (0|1);$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*kAMSDataClassName = \"com\.apple\.(Bookmarks|Calendars|Contacts|MailAccounts|Notes)\";$
+^%DATE% %HOSTNAME% %ITUNES%[ 	]*kAMSDataClassReset = (0|1);$
+^%DATE% %HOSTNAME% %ITUNES% [0-9-]+ [0-9:\.]+ AppleMobileBackup\[%INT%:%INT%\] BackupAgent starting up\.\.\.$
+^%DATE% %HOSTNAME% %ITUNES%(| <Error>:) doClip: empty path\.$
+^%DATE% %HOSTNAME% %ITUNES% Child process initialized\.$
+^%DATE% %HOSTNAME% %ITUNES% Child with pid %INT% exited normally$
+^%DATE% %HOSTNAME% %ITUNES% Child: NULL command dict read, exiting\.\.\.$
+^%DATE% %HOSTNAME% %ITUNES% Child: Read descriptor is 0, which may be a problem. Continuing ahead blindly\.$
+^%DATE% %HOSTNAME% %ITUNES% device (|dis)connected \(isDFU = (0|1)\)$
+^%DATE% %HOSTNAME% %ITUNES% DownloadCategoryContentsThread took %FLOAT% seconds$
+^%DATE% %HOSTNAME% %ITUNES% Parent: NULL response dict read, try sending command again\.\.\.$
+^%DATE% %HOSTNAME% %ITUNES% Waiter has started running\.\.\.$
+^%DATE% %HOSTNAME% %ITUNES% Waiter is done running$

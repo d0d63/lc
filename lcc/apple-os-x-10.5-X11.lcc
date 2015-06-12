@@ -1,0 +1,40 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-X11.lcc,v 1.2 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% com\.apple\.usbmuxd%PID%:
+^%DATE% %HOSTNAME% _spotlight%PID%:
+
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*\(dix\) (enabling|initialising) device %INT%$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*\(EE\) XKB: Couldn\'t open rules file /usr/X11/share/X11/xkb/rules/base$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*AllocNewConnection: client index = %INT%, socket fd = %INT%$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*argv\[%INT%\] = .*$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*Build Date: 20090327$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*Calling ListenOnOpenFD\(\) for new fd: %INT%$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*DarwinListenOnOpenFD: %INT%$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*font_cache: Done$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*font_cache: Making fonts\.dir for updated directories\.$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*font_cache: Scanning (system|user) font directories to generate X11 font caches$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*font_cache: Updating FC cache$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*InitConnectionLimits: MaxClients = 255$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*Quitting Xquartz\.\.\.$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*Sync Extension 3\.0$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*Waiting for startup parameters via Mach IPC\.$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*waiting for X server to shut down[ 	]*$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*X\.Org X Server 1\.4\.2-apple33$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*X11\.app Handing off fd to server thread via DarwinListenOnOpenFD\(%INT%\)$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*X11\.app: do_start_x11_server\(\): argc=6$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*X11\.app: Launching /usr/X11/bin/xterm:$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*X11\.app: Listening on socket for fd handoff:  \(%INT%\) /var/tmp/tmp\.0\..*$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*X11\.app: main\(\): argc=2$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*X11\.app: Received new \$DISPLAY fd: %INT% \.\.\. sleeping to allow xinitrc to catchup\.$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*X11\.app: Thread created for handoff\.  Returning success to tell caller to connect and push the fd\.$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*xauth:  creating new authority file /Users/%USERS%/\.serverauth\.%INT%$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*xinit:  connection to X server lost\.$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*Xquartz starting:$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*Xquartz: Handoff connection established \(try %INT% of %INT%\) on fd %INT%, \"/var/tmp/tmp\.0\..*\"\.  Sending message\.$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*Xquartz: Message sent\.  Closing handoff fd\.$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|privileged_)startx)%PID%:[ 	]*Xquartz: Starting X server: /Applications/Utilities/X11\.app/Contents/MacOS/X11 --listenonly$
+^%DATE% %HOSTNAME% (|\[0x0-0x%HEX%\]\.org\.x\.X11|org\.x\.(|_privileged)startx)%PID%:[ 	]*Xquartz: X11\.app = /Applications/Utilities/X11\.app/Contents/MacOS/X11$
+
+^%DATE% %HOSTNAME% X11.bin%PID%: Could not connect the action apps_table_cancel: to target of class X11Controller$

@@ -1,0 +1,11 @@
+# Copyright (c) 2005, 2006, 2007, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: uw-imapd.lcc,v 1.12 2010/01/05 03:04:37 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% imapd%PID%: Authenticated user=%USERS% host=.*\[%IPv4%\] mech=PLAIN$
+^%DATE% %HOSTNAME% imapd%PID%: Autologout user=%USERS% host=.*\[%IP%\]$
+^%DATE% %HOSTNAME% imapd%PID%: Hangup user=%USERS% host=\[%IP%\]$
+^%DATE% %HOSTNAME% imapd%PID%: imaps SSL service init from %IPv4%
+^%DATE% %HOSTNAME% imapd%PID%: Killed \(lost mailbox lock\) user=%USERS% host=.*\[%IP%\]$
+^%DATE% %HOSTNAME% imapd%PID%: Login user=%USERS% host=.*\[%IP%\]$
+^%DATE% %HOSTNAME% imapd%PID%: Unexpected client disconnect, while reading literal user=%USERS% (|.*)\[%IP%\]

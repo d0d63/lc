@@ -1,0 +1,17 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-cups.lcc,v 1.2 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% Firewall%PID%: Allow cups-lpd connecting from %IP%:%INT% uid = 0 proto=6$
+^%DATE% %HOSTNAME% Firewall%PID%: cupsd is listening from %IP%:%INT% uid = 0 proto=6$
+
+^%DATE% %HOSTNAME% cups-lpd%PID%: Closing connection$
+^%DATE% %HOSTNAME% cups-lpd%PID%: Connection from .*\(IPv[46] %IP%\)$
+^%DATE% %HOSTNAME% cups-lpd%PID%: Print file - job ID = %INT%$
+^%DATE% %HOSTNAME% cups-lpd%PID%: Receive print job for .*$
+
+^%DATE% %HOSTNAME% /usr/sbin/cupsd%PID%: dnssd_clientstub read_all\(6\) failed 0/28 0[ 	]*$
+
+^%DATE% %HOSTNAME% launchproxy%PID%: /usr/libexec/cups/daemon/cups-lpd: Connection from: %IP% on port: %INT%$
+
+^%DATE% %HOSTNAME% org\.cups\.cups-lpd%PID%: launchproxy%PID%: /usr/libexec/cups/daemon/cups-lpd: Connection from: %IP% on port: %INT%$

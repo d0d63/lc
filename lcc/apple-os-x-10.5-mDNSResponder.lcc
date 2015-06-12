@@ -1,0 +1,6 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-mDNSResponder.lcc,v 1.2 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% mDNSResponder mDNSResponder-176\.3 \(Oct 16 2008 04:25:18\)%PID%: (starting|stopping)$
+^%DATE% %HOSTNAME% mDNSResponder%PID%: Note: Frequent transitions for interface en[0-9]+ \(%IP%\); network traffic reduction measures in effect$

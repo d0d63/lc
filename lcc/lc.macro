@@ -1,0 +1,17 @@
+# Copyright (c) 2007, 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: lc.macro,v 1.8 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+%ALPHANUM% [0-9a-zA-Z]+
+%DAY% (Sun|Mon|Tue|Wed|Thu|Fri|Sat)
+%DATE% (|(Sun|Mon|Tue|Wed|Thu|Fri|Sat) )(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) [ 0-9][0-9] [0-9:]+
+%ETHER% [0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]:[0-9a-fA-F][0-9a-fA-F]
+%FLOAT% (\+|-|)[0-9]+\.[0-9]+
+%GUID% [0-9a-fA-F]+-[0-9a-fA-F]+-[0-9a-fA-F]+-[0-9a-fA-F]+-[0-9a-fA-F]+
+%HEX% (|0x)[0-9a-fA-F]+
+%INT% [0-9]+
+%IPv4% [0-9]+\.[0-9]+\.[0-9]+\.[0-9]+
+%IPv6% ([0-9a-fA-F:]+|::ffff:[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)
+%IP% ([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+|[0-9a-fA-F:]+|::ffff:[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+)
+%PID% \[[0-9]+\]
+

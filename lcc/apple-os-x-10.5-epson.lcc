@@ -1,0 +1,9 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-epson.lcc,v 1.2 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME%.*EPSON Scanner%PID%.*: CGSDisplayServerShutdown: Detaching display subsystem from window server$
+^%DATE% %HOSTNAME%.*EPSON Scanner%PID%.*: CGSShutdownServerConnections: Detaching application from window server$
+^%DATE% %HOSTNAME%.*EPSON Scanner%PID%.*: Application transferred too few scanlines$
+
+^%DATE% %HOSTNAME% \[0x0-0x%HEX%\]\.com\.epson\.scanner\.ica%PID%:[ 	]*$

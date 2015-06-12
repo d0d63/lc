@@ -1,0 +1,26 @@
+# Copyright (c) 2005, 2006, 2007, 2013 M. Dodge Mumford. All rights reserved.
+#
+# vim: tw=0
+# $dodge: nagios.lcc,v 1.1 2013/12/19 14:37:22 dodge Exp $ 
+#
+
+^%DATE% %HOSTNAME% nagios3: Auto-save of retention data completed successfully\.$
+
+^%DATE% %HOSTNAME% nagios3: CURRENT HOST STATE: gateway;UP;HARD;1;PING OK - Packet loss = 0., RTA = %FLOAT% ms[ \t]*$
+^%DATE% %HOSTNAME% nagios3: CURRENT HOST STATE: localhost;UP;HARD;1;PING OK - Packet loss = 0., RTA = %FLOAT% ms[ \t]*$
+
+^%DATE% %HOSTNAME% nagios3: CURRENT SERVICE STATE: gateway;PING;OK;HARD;1;PING OK - Packet loss = 0., RTA = %FLOAT% ms[ \t]*$
+^%DATE% %HOSTNAME% nagios3: CURRENT SERVICE STATE: localhost;Current Load;OK;HARD;1;OK - load average: %FLOAT%, %FLOAT%, %FLOAT%[ \t]*$
+^%DATE% %HOSTNAME% nagios3: CURRENT SERVICE STATE: localhost;Current Users;OK;HARD;1;USERS OK - %INT% users currently logged in[ \t]*$
+^%DATE% %HOSTNAME% nagios3: CURRENT SERVICE STATE: localhost;Disk Space;OK;HARD;1;DISK OK[ \t]*$
+^%DATE% %HOSTNAME% nagios3: CURRENT SERVICE STATE: localhost;HTTP;OK;HARD;1;HTTP OK: HTTP/1\.1 200 OK - %INT% bytes in %FLOAT% second response time[ \t]*$
+^%DATE% %HOSTNAME% nagios3: CURRENT SERVICE STATE: localhost;SSH;OK;HARD;1;SSH OK - OpenSSH_5\.1p1 Debian-6 \(protocol 2\.0\)[ \t]*$
+^%DATE% %HOSTNAME% nagios3: CURRENT SERVICE STATE: localhost;SSH;OK;HARD;1;SSH OK - OpenSSH_5\.9p1 Debian-1 \(protocol 2\.0\)[ \t]*$
+^%DATE% %HOSTNAME% nagios3: CURRENT SERVICE STATE: localhost;Total Processes;OK;HARD;1;PROCS OK: %INT% processes[ \t]*$
+
+^%DATE% %HOSTNAME% nagios3: LOG ROTATION: DAILY[ \t]*$
+^%DATE% %HOSTNAME% nagios3: LOG VERSION: 2\.0[ \t]*$
+
+^%DATE% %HOSTNAME% sshd%PID%: Connection closed by 127\.0\.0\.1 \[preauth\]$
+^%DATE% %HOSTNAME% sshd%PID%: fatal: Read from socket failed: Connection reset by peer \[preauth\]$
+

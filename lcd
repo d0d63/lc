@@ -1,0 +1,39 @@
+#!/bin/sh
+# Copyright (c) 2005, 2006, 2007, 2010 M. Dodge Mumford. All Rights Reserved.
+# $dodge: lcd,v 1.20 2012/01/08 11:25:23 dodge Exp $
+
+# This script should be executed from cron. It will run all the tests and
+# send an email containing new log changes since the last time it was run.
+
+# Look for the XXX's and replace them with stuff that seems reasonable.
+
+# Hostname to be reported in the email subject line
+HOSTNAME="XXX"
+
+# Whom the emails should be sent to.
+RECIPIENT="XXX"
+
+# Whom the email should be sent from.
+SENDER="XXX"
+
+# I like to keep this in ~/lc/ but it may change.
+WORKINGDIR="${HOME}/lc"
+
+export PATH=/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin
+
+cd ${WORKINGDIR} || exit 1
+
+./lc /var/log/all* > current
+
+diff -a last current| grep -v "^<" | egrep -v "^[0-9,acd\-][0-9,acd\-]*$" > delta
+a=`wc -c delta | awk '{print $1}'`
+
+if [ "$a" != "0" ] ; then
+	echo "From: ${SENDER}" > msg
+	echo "${msg}To: ${RECIPIENT}" >> msg
+	echo "${msg}Subject: ${HOSTNAME} unknown new log entry" >> msg
+	echo >> msg
+	cat msg delta | /usr/sbin/sendmail -t
+fi
+
+mv current last

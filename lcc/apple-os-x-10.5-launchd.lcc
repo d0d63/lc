@@ -1,0 +1,15 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-launchd.lcc,v 1.2 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME%.* com\.apple\.launchctl\.System%PID%: BootCacheControl: could not open /var/db/BootCache\.playlist: No such file or directory$
+^%DATE% %HOSTNAME%.* com\.apple\.launchctl\.System%PID%: BootCacheControl: could not unlink playlist /var/db/BootCache\.playlist: Unknown error: -1$
+^%DATE% %HOSTNAME%.* com\.apple\.launchctl\.System%PID%: fsck_hfs: Use the -f option to force checking\.$
+^%DATE% %HOSTNAME%.* com\.apple\.launchctl\.System%PID%: fsck_hfs: Volume is journaled\.  No checking performed\.$
+^%DATE% %HOSTNAME%.* com\.apple\.launchctl\.System%PID%: launchctl: Please convert the following to launchd: .*$
+
+^%DATE% %HOSTNAME%.* com\.apple\.launchd%PID% \(.*\): Check-in of Mach service failed\. PID %INT% is not privileged: com\.apple\.dyld$
+^%DATE% %HOSTNAME%.* com\.apple\.launchd%PID% \(.*\): Exited with exit code: %INT%$
+^%DATE% %HOSTNAME%.* com\.apple\.launchd%PID% \(.*\): Exited: Terminated$
+^%DATE% %HOSTNAME%.* com\.apple\.launchd%PID% \(.*\): Stray process with PGID equal to this dead job: PID %INT% PPID %INT% .*$
+^%DATE% %HOSTNAME%.* com\.apple\.launchd%PID% \(.*\): Throttling respawn: Will start in %INT% seconds$

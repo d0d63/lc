@@ -1,0 +1,7 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-automountd.lcc,v 1.3 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% automountd%PID%: self_check: unknown host: .DS_Store$
+^%DATE% %HOSTNAME% automountd%PID%: self_check: unknown host: Backups\.backupdb$
+^%DATE% %HOSTNAME% automountd%PID%: self_check: unknown host: mach_kernel$

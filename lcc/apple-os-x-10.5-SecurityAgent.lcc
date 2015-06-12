@@ -1,0 +1,36 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-SecurityAgent.lcc,v 1.3 2011/02/20 22:33:53 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% SecurityAgent%PID%: (CPSGetProcessInfo|CPSPBGetProcessInfo)\(\): This call is deprecated and should not be called anymore\.$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: \*\*\* -\[NSRecursiveLock unlock\]: lock \(<NSRecursiveLock: 0x%HEX%> \'\(null\)\'\) unlocked when not locked$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: _NSShapePlainWindow: error setting window shape \(%INT%\)$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: _NXMoveWindow: error moving window \(%INT%\)$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: _NXPlaceWindow: error setting window shape \(%INT%\)$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: _NXTermWindow: error releasing window \(%INT%\)$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: An exception occurred = Error \((|-)%INT%\) creating CGSWindow$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: ATSClient: can't re-connect with ATSServer   status = -3182[ 	]*$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: ATSServer returned different session ID\.  \(client = %INT%, server = %INT%\)\.$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: CGSDisplayServerShutdown: Detaching display subsystem from window server$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: CGSShutdownServerConnections: Detaching application from window server$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: GetOurLSSessionIDInit\(\), returned error 0x1, securitySessionID=0x0 attrs=0 uid=92 euid=92\.  cf Radar 5123589\.$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: HIToolbox: received notification of WindowServer event port death\.$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: kCGErrorCannotComplete : (CGSDeviceGetGeometry|CGSDeviceLock|CGSDeviceSynchronize): Invalid device window$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: kCGErrorFailure : _CGSLockWindow: cannot synchronize window backing surface$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: kCGErrorInvalidConnection : (CGSGetNextEventRecordInternal|CGSGetWindowBounds|CGSGetWindowGeometry): Invalid connection$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: kCGErrorInvalidConnection : CGSGetWindowMouseLocation called with invalid connection$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: kCGErrorRangeCheck : On-demand launch of the Window Server is allowed for root user only\.$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: LaunchServices/5123589: Unable to lookup coreservices session port for session 0x0 uid=92 euid=92$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: Login Window done$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: Login Window is taller than the display$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: Mechanism(Destroy|Invoke) 0x%HEX% retainCount 1$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: MIG: server died : Set a breakpoint at CGErrorBreakpoint\(\) to catch errors as they are returned$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: NSSecureTextFieldCell detected a field editor \(\(null\)\) that is not a NSTextView subclass designed to work with the cell\. Ignoring\.\.\.$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: port matched the WindowServer port created in BindCGSToRunLoop$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: Posting ATSServer died message\.  \(server pid = %INT%, session ID = %INT%\)$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: PScurrentwindowbounds: CGSGetWindowBounds returned error \(%INT%\)$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: received ATSServer died message\.  \(old server pid = %INT%, new pid = %INT%, session ID = %INT%\)$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: SessionGetInfo\(0xffffffff\) -> Mach 268435459$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: Showing Login Window$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: Unable to watch for network changes$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: User info context values set for %USERS%$

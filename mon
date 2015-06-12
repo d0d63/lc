@@ -1,0 +1,90 @@
+#!/bin/sh
+# Copyright (c) 2005, 2006, 2007, 2009, 2010 M. Dodge Mumford. All Rights Reserved.
+# $dodge: mon,v 1.17 2010/01/05 02:40:32 dodge Exp $
+
+# Using globals everywhere because I can't find a way to get a string value
+# to return from a function. :-P
+
+get_rows () {
+	case "$STTY_TYPE" in
+		"sun" )
+			ROWS=`stty -a | grep "rows" | head -1 | awk '{print $3}' | sed 's/;//'`
+			;;
+
+		"linux" )
+			ROWS=`stty -a | grep "rows" | head -1 | awk '{print $5}' | sed 's/;//'`
+			;;
+
+		"bsd" )
+			ROWS=`stty -a | grep "rows" | head -1 | awk '{print $4}'`
+			;;
+	esac
+
+	ROWS=`expr $ROWS - 1`
+	export ROWS
+	return 0
+}
+		
+
+determine_stty_type () {
+	s=`stty -a | grep "rows" | head -1`
+	if [ "$s" = "" ]; then
+		echo "Can't determine number of rows, exiting"
+		return 1
+	fi
+
+	echo "$s" | grep "rows = " > /dev/null 2>&1
+	if [ "$?" = "0" ] ; then
+		STTY_TYPE="sun"
+		export STTY_TYPE
+		return 0
+	fi
+
+	echo "$s" | egrep "rows [0-9]" > /dev/null 2>&1
+	if [ "$?" = "0" ] ; then
+		STTY_TYPE="linux"
+		export STTY_TYPE
+		return 0
+	fi
+
+	echo "$s" | egrep "[0-9] rows" > /dev/null 2>&1
+	if [ "$?" = "0" ] ; then
+		STTY_TYPE="bsd"
+		export STTY_TYPE
+		return 0
+	fi
+
+	return 1
+}
+
+determine_stty_type
+if [ "$STTY_TYPE" = "" ] ; then
+	echo "Can't determine number of rows, exiting"
+	exit 1
+fi
+
+if [ "$1" = "--test-rows" ] ; then
+	get_rows
+	echo "STTY_TYPE: ${STTY_TYPE}"
+	echo "rows: ${ROWS}";
+	exit 0
+fi
+
+if [ ! "$1" ]; then
+	echo "Uhh, need a file"
+	exit 1
+fi
+
+while [ true ]; do
+	a=`cat lc lcc/*.lcc lcc/*.macro lcc/*.squish; ls -la $*`
+	if [ "$a" != "$b" ] ; then
+		echo
+		echo "--working--"
+		b="$a"
+		get_rows
+		c=`./lc $* 2>&1 | head -${ROWS}`
+		clear
+		echo "$c"
+	fi
+	sleep 3
+done

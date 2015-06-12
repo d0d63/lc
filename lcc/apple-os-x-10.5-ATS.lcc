@@ -1,0 +1,5 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-ATS.lcc,v 1.2 2010/01/05 03:01:38 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% /System/Library/Frameworks/ApplicationServices\.framework/Frameworks/ATS\.framework/Support/ATSServer%PID%: ATSFindFolder timeout\. \(domain:(|-)%INT%, dirType:\'font\', createFolder:false, ATSServer pid:%INT%\)$

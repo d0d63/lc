@@ -1,0 +1,19 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-quicklookd.lcc,v 1.3 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% com\.apple\.quicklook%PID%:[ 	]*$
+^%DATE% %HOSTNAME% com\.apple\.quicklook%PID%:[ 	]*End-of-central-directory signature not found.  Either this file is not$
+^%DATE% %HOSTNAME% com\.apple\.quicklook%PID%:[ 	]*a zipfile, or it constitutes one disk of a multi-part archive\.  In the$
+^%DATE% %HOSTNAME% com\.apple\.quicklook%PID%:[ 	]*latter case the central directory and zipfile comment will be found on$
+^%DATE% %HOSTNAME% com\.apple\.quicklook%PID%:[ 	]*the last disk\(s\) of this archive\.$
+^%DATE% %HOSTNAME% com\.apple\.quicklook%PID%: font \`F1\.0\' not found in document\.$
+
+^%DATE% %HOSTNAME%.*quicklookd%PID%.*: \(ipc/send\) invalid destination port : CGSReleaseShmem : Cannot release shared memory$
+^%DATE% %HOSTNAME%.*quicklookd%PID%.*: CGSDisplayServerShutdown: Detaching display subsystem from window server$
+^%DATE% %HOSTNAME%.*quicklookd%PID%.*: CGSShutdownServerConnections: Detaching application from window server$
+^%DATE% %HOSTNAME%.*quicklookd%PID%.*: MIG: server died : CGSReleaseShmem : Cannot release shared memory$
+^%DATE% %HOSTNAME%.*quicklookd%PID%.*: MIG: server died : Set a breakpoint at CGErrorBreakpoint\(\) to catch errors as they are returned$
+
+^%DATE% %HOSTNAME% quicklookd%PID%: \[QL ERROR\] \'Creating thumbnail\' timed out for \'<QLThumbnailRequest .*>\'$
+^%DATE% %HOSTNAME% quicklookd%PID%: EXCEPTION CPMessageException: \(null\)$

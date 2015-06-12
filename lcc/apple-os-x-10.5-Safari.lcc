@@ -1,0 +1,16 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.5-Safari.lcc,v 1.2 2010/01/05 03:01:39 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME%.* \[0x0-0x%HEX%\]\.com\.apple\.Safari%PID%:[ 	]*$
+
+^%DATE% %HOSTNAME%.* /Applications/Safari\.app/Contents/MacOS/Safari%PID%: CPSGetProcessInfo\(\): This call is deprecated and should not be called anymore\.$
+^%DATE% %HOSTNAME%.* /Applications/Safari\.app/Contents/MacOS/Safari%PID%: CPSPBGetProcessInfo\(\): This call is deprecated and should not be called anymore\.$
+
+^%DATE% %HOSTNAME%.* Safari%PID%.*: CGContextFlush: invalid context$
+^%DATE% %HOSTNAME%.* Safari%PID%.*: CGImageDestinationAddImageFromSource image 0 of source is nil$
+^%DATE% %HOSTNAME%.* Safari%PID%.*: CGImageDestinationFinalize image destination does not have enough images$
+
+^%DATE% %HOSTNAME%.* socketfilterfw%PID%: CFDictionarySetValue\(\): immutable collection 0x%HEX% given to mutating function$
+
+^%DATE% %HOSTNAME%.* Firewall%PID%: Safari is listening from ::ffff:0.0.0.0:0 uid = %INT% proto=6$

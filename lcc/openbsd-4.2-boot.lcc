@@ -1,0 +1,107 @@
+# Copyright (c) 2007, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: openbsd-4.2-boot.lcc,v 1.12 2010/01/05 03:24:59 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% /bsd: OpenBSD 4\.2 \(.*\) #[0-9]+: .*$
+^%DATE% %HOSTNAME% /bsd:     root@tard\.dmumford\.com:/data/src/sys/arch/i386/compile/TARD
+^%DATE% %HOSTNAME% /bsd: cpu0: Intel Pentium III \("GenuineIntel" 686-class\) 1 GHz
+^%DATE% %HOSTNAME% /bsd: cpu0: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,MMX,FXSR,SSE
+^%DATE% %HOSTNAME% /bsd: real mem  = 536375296 \(511MB\)
+^%DATE% %HOSTNAME% /bsd: avail mem = 510525440 \(486MB\)
+^%DATE% %HOSTNAME% /bsd: mainbus0 at root
+^%DATE% %HOSTNAME% /bsd: bios0 at mainbus0: AT/286\+ BIOS, date 12/28/01, BIOS32 rev\. 0 @ 0xfd85e, SMBIOS rev\. 2\.3 @ 0xef520 \(51 entries\)
+^%DATE% %HOSTNAME% /bsd: bios0: vendor Intel Corporation version "STL20\.86B\.0026\.P01\.0112282315" date 12/28/2001
+^%DATE% %HOSTNAME% /bsd: bios0: Intel STL2
+^%DATE% %HOSTNAME% /bsd: apm at bios0 function 0x15 not configured
+^%DATE% %HOSTNAME% /bsd: pcibios0 at bios0: rev 2\.1 @ 0xfd7c0/0x840
+^%DATE% %HOSTNAME% /bsd: pcibios0: PCI BIOS has 11 Interrupt Routing table entries
+^%DATE% %HOSTNAME% /bsd: pcibios0: PCI Interrupt Router at 000:15:0 \("ServerWorks OSB4" rev 0x00\)
+^%DATE% %HOSTNAME% /bsd: pcibios0: PCI bus #0 is the last bus
+^%DATE% %HOSTNAME% /bsd: bios0: ROM list: 0xc0000/0x8000 0xc8000/0x1800 0xc9800/0x6000
+^%DATE% %HOSTNAME% /bsd: acpi at mainbus0 not configured
+^%DATE% %HOSTNAME% /bsd: mainbus0: Intel MP Specification \(Version 1\.4\)
+^%DATE% %HOSTNAME% /bsd: cpu0 at mainbus0: apid 3 \(boot processor\)
+^%DATE% %HOSTNAME% /bsd: cpu0: apic clock running at 133 MHz
+^%DATE% %HOSTNAME% /bsd: cpu1 at mainbus0: apid 0 \(application processor\)
+^%DATE% %HOSTNAME% /bsd: cpu1: Intel Pentium III \("GenuineIntel" 686-class\) 1 GHz
+^%DATE% %HOSTNAME% /bsd: cpu1: FPU,V86,DE,PSE,TSC,MSR,PAE,MCE,CX8,APIC,SEP,MTRR,PGE,MCA,CMOV,PAT,PSE36,MMX,FXSR,SSE
+^%DATE% %HOSTNAME% /bsd: mainbus0: bus 0 is type PCI   
+^%DATE% %HOSTNAME% /bsd: mainbus0: bus 1 is type PCI   
+^%DATE% %HOSTNAME% /bsd: mainbus0: bus 2 is type ISA   
+^%DATE% %HOSTNAME% /bsd: ioapic0 at mainbus0: apid 4 pa 0xfec00000, version 11, 16 pins
+^%DATE% %HOSTNAME% /bsd: ioapic1 at mainbus0: apid 5 pa 0xfec01000, version 11, 16 pins
+^%DATE% %HOSTNAME% /bsd: pci0 at mainbus0 bus 0: configuration mode 1 \(no bios\)
+^%DATE% %HOSTNAME% /bsd: pchb0 at pci0 dev 0 function 0 "ServerWorks CNB20LE Host" rev 0x06
+^%DATE% %HOSTNAME% /bsd: pchb1 at pci0 dev 0 function 1 "ServerWorks CNB20LE Host" rev 0x06
+^%DATE% %HOSTNAME% /bsd: pci1 at pchb1 bus 1
+^%DATE% %HOSTNAME% /bsd: ahc0 at pci1 dev 4 function 0 "Adaptec AIC-7899 U160" rev 0x01: apic 5 int 0 \(irq 9\)
+^%DATE% %HOSTNAME% /bsd: scsibus0 at ahc0: 16 targets
+^%DATE% %HOSTNAME% /bsd: sd0 at scsibus0 targ 0 lun 0: <IBM, DDYS-T18350N, S96H> SCSI3 0/direct fixed
+^%DATE% %HOSTNAME% /bsd: sd0: 17501MB, 15110 cyl, 6 head, 395 sec, 512 bytes/sec, 35843670 sec total
+^%DATE% %HOSTNAME% /bsd: sd1 at scsibus0 targ 1 lun 0: <SEAGATE, ST34555W, 0930> SCSI2 0/direct fixed
+^%DATE% %HOSTNAME% /bsd: sd1: 4340MB, 6300 cyl, 8 head, 176 sec, 512 bytes/sec, 8888924 sec total
+^%DATE% %HOSTNAME% /bsd: sd2 at scsibus0 targ 2 lun 0: <SEAGATE, ST336753LW, 0006> SCSI3 0/direct fixed
+^%DATE% %HOSTNAME% /bsd: sd2: 35003MB, 31310 cyl, 4 head, 572 sec, 512 bytes/sec, 71687372 sec total
+^%DATE% %HOSTNAME% /bsd: ahc1 at pci1 dev 4 function 1 "Adaptec AIC-7899 U160" rev 0x01: apic 5 int 1 \(irq 11\)
+^%DATE% %HOSTNAME% /bsd: scsibus1 at ahc1: 16 targets
+^%DATE% %HOSTNAME% /bsd: sd3 at scsibus1 targ 6 lun 0: <IBM, DPSS-318350N, S96H> SCSI3 0/direct fixed
+^%DATE% %HOSTNAME% /bsd: sd3: 17501MB, 14627 cyl, 5 head, 490 sec, 512 bytes/sec, 35843670 sec total
+^%DATE% %HOSTNAME% /bsd: vga1 at pci0 dev 2 function 0 "ATI Mach64 GV" rev 0x7a
+^%DATE% %HOSTNAME% /bsd: wsdisplay0 at vga1 mux 1: console \(80x25, vt100 emulation\)
+^%DATE% %HOSTNAME% /bsd: wsdisplay0: screen 1-5 added \(80x25, vt100 emulation\)
+^%DATE% %HOSTNAME% /bsd: fxp0 at pci0 dev 3 function 0 "Intel 8255x" rev 0x08, i82559: apic 5 int 2 \(irq 10\), address 00:d0:b7:b6:c5:17
+^%DATE% %HOSTNAME% /bsd: inphy0 at fxp0 phy 1: i82555 10/100 PHY, rev\. 4
+^%DATE% %HOSTNAME% /bsd: piixpm0 at pci0 dev 15 function 0 "ServerWorks OSB4" rev 0x50: polling
+^%DATE% %HOSTNAME% /bsd: iic0 at piixpm0
+^%DATE% %HOSTNAME% /bsd: pciide0 at pci0 dev 15 function 1 "ServerWorks OSB4 IDE" rev 0x00: DMA
+^%DATE% %HOSTNAME% /bsd: wd0 at pciide0 channel 0 drive 0: <WDC WD400BB-00CLB0>
+^%DATE% %HOSTNAME% /bsd: wd0: 16-sector PIO, LBA, 38166MB, 78165360 sectors
+^%DATE% %HOSTNAME% /bsd: atapiscsi0 at pciide0 channel 0 drive 1
+^%DATE% %HOSTNAME% /bsd: scsibus2 at atapiscsi0: 2 targets
+^%DATE% %HOSTNAME% /bsd: cd0 at scsibus2 targ 0 lun 0: <SONY, CDU4811, PY09> SCSI0 5/cdrom removable
+^%DATE% %HOSTNAME% /bsd: wd0\(pciide0:0:0\): using PIO mode 4, DMA mode 2, Ultra-DMA mode 2
+^%DATE% %HOSTNAME% /bsd: cd0\(pciide0:0:1\): using PIO mode 4, DMA mode 2, Ultra-DMA mode 2
+^%DATE% %HOSTNAME% /bsd: pciide0: couldn't map native-PCI interrupt
+^%DATE% %HOSTNAME% /bsd: isa0 at mainbus0
+^%DATE% %HOSTNAME% /bsd: isadma0 at isa0
+^%DATE% %HOSTNAME% /bsd: pckbc0 at isa0 port 0x60/5
+^%DATE% %HOSTNAME% /bsd: pckbd0 at pckbc0 \(kbd slot\)
+^%DATE% %HOSTNAME% /bsd: pckbc0: using irq 1 for kbd slot
+^%DATE% %HOSTNAME% /bsd: wskbd0 at pckbd0: console keyboard, using wsdisplay0
+^%DATE% %HOSTNAME% /bsd: pms0 at pckbc0 \(aux slot\)
+^%DATE% %HOSTNAME% /bsd: pckbc0: using irq 12 for aux slot
+^%DATE% %HOSTNAME% /bsd: wsmouse0 at pms0 mux 0
+^%DATE% %HOSTNAME% /bsd: pcppi0 at isa0 port 0x61
+^%DATE% %HOSTNAME% /bsd: midi0 at pcppi0: <PC speaker>
+^%DATE% %HOSTNAME% /bsd: spkr0 at pcppi0
+^%DATE% %HOSTNAME% /bsd: lpt0 at isa0 port 0x378/4 irq 7
+^%DATE% %HOSTNAME% /bsd: npx0 at isa0 port 0xf0/16: reported by CPUID; using exception 16
+^%DATE% %HOSTNAME% /bsd: pccom0 at isa0 port 0x3f8/8 irq 4: ns16550a, 16 byte fifo
+^%DATE% %HOSTNAME% /bsd: pccom1 at isa0 port 0x2f8/8 irq 3: ns16550a, 16 byte fifo
+^%DATE% %HOSTNAME% /bsd: fdc0 at isa0 port 0x3f0/6 irq 6 drq 2
+^%DATE% %HOSTNAME% /bsd: pctr: 686-class user-level performance counters enabled
+^%DATE% %HOSTNAME% /bsd: mtrr: Pentium Pro MTRR support
+^%DATE% %HOSTNAME% /bsd: Kernelized RAIDframe activated
+^%DATE% %HOSTNAME% /bsd: ahc0: target 0 using 16bit transfers
+^%DATE% %HOSTNAME% /bsd: ahc0: target 0 synchronous at 20\.0MHz, offset = 0x3f
+^%DATE% %HOSTNAME% /bsd: dkcsum: sd0 matches BIOS drive 0x80
+^%DATE% %HOSTNAME% /bsd: ahc0: target 1 using 16bit transfers
+^%DATE% %HOSTNAME% /bsd: ahc0: target 1 synchronous at 20\.0MHz, offset = 0xf
+^%DATE% %HOSTNAME% /bsd: dkcsum: sd1 matches BIOS drive 0x81
+^%DATE% %HOSTNAME% /bsd: ahc0: target 2 using 16bit transfers
+^%DATE% %HOSTNAME% /bsd: ahc0: target 2 synchronous at 20\.0MHz, offset = 0x3f
+^%DATE% %HOSTNAME% /bsd: dkcsum: sd2 matches BIOS drive 0x82
+^%DATE% %HOSTNAME% /bsd: ahc1: target 6 using 16bit transfers
+^%DATE% %HOSTNAME% /bsd: ahc1: target 6 synchronous at 20\.0MHz, offset = 0x3f
+^%DATE% %HOSTNAME% /bsd: dkcsum: sd3 matches BIOS drive 0x83
+^%DATE% %HOSTNAME% /bsd: dkcsum: wd0 matches BIOS drive 0x84
+^%DATE% %HOSTNAME% /bsd: root on sd0a swap on sd0b dump on sd0b
+
+^%DATE% %HOSTNAME% named%PID%: Binding locally$
+
+^%DATE% %HOSTNAME% cron%PID%: \(CRON\) STARTUP \(V5\.0\)$
+^%DATE% %HOSTNAME% ntpd%PID%: ntp engine ready$
+^%DATE% %HOSTNAME% savecore: no core dump$
+^%DATE% %HOSTNAME% sm-mta%PID%: starting daemon \(8\.14\.[01]\): SMTP\+queueing@[0-9:]+$
+^%DATE% %HOSTNAME% syslogd: start$
+

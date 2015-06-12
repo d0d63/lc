@@ -1,0 +1,246 @@
+# $dodge: apple-os-x-10.6.lcc,v 1.4 2012/01/15 16:58:24 dodge Exp $
+# vim: tw=0
+
+# Lots of things spew this. Why?
+^%DATE% %HOSTNAME% (AppleMobileBackup|AppleMobileDeviceHelper|AppleMobileSync|ath|iTunes|iTunesHelper|MDCrashReportTool|PhoneViewHelper)%PID%: _AMDDeviceAttachedCallbackv3 \(thread 0x%HEX%\): Device \'AMDevice 0x%HEX% \{UDID = %HEX%, device ID = %INT%, location ID = 0x%HEX%, product ID = 0x%HEX%\}\' attached\.$
+^%DATE% %HOSTNAME% (AppleMobileBackup|AppleMobileDeviceHelper|AppleMobileSync|ath|iTunes|iTunesHelper|MDCrashReportTool|PhoneViewHelper)%PID%: _AMDDeviceDetached \(thread 0x%HEX%\): Device \'AMDevice 0x%HEX% \{UDID = %HEX%, device ID = %INT%, location ID = 0x%HEX%, product ID = 0x%HEX%\}\' detached\.$
+
+^%DATE%: --- last message repeated 1 time ---$
+^%DATE%: --- last message repeated %INT% times ---$
+
+^%DATE% %HOSTNAME% _spotlight%PID%: %INT% Install Scripts run\.$
+^%DATE% %HOSTNAME% _spotlight%PID%: Begin script: 
+^%DATE% %HOSTNAME% _spotlight%PID%: End script: 
+^%DATE% %HOSTNAME% _spotlight%PID%: Running Install Scripts \. \. \.$
+
+^%DATE% %HOSTNAME% AddressBookSync%PID%: Client state being vacuumed$
+
+^%DATE% %HOSTNAME% AppleMobileSync%PID%: Client state being vacuumed$
+
+^%DATE% %HOSTNAME% applepushserviced%PID%: ApplePushService: Certificate not yet generated$
+
+^%DATE% %HOSTNAME% /Applications/iTunes.app/Contents/MacOS/iTunes%PID%: device (|dis)connected \(isDFU = (0|1)\)$
+^%DATE% %HOSTNAME% /Applications/iTunes.app/Contents/MacOS/iTunes%PID%: tid:207 - device (|dis)connected \(isDFU = (0|1)\)$
+
+^%DATE% %HOSTNAME% auditd%PID%: Audit review group \'audit\' not available, using daemon gid \(0\)$
+^%DATE% %HOSTNAME% auditd%PID%: Auditing enabled$
+^%DATE% %HOSTNAME% auditd%PID%: started by launchd\.\.\.$
+
+^%DATE% %HOSTNAME% authexec%PID%: executing 
+
+^%DATE% %HOSTNAME% %BEZELUISERVER% CGSDisplayServerShutdown: Detaching display subsystem from window server$
+^%DATE% %HOSTNAME% %BEZELUISERVER% CGSShutdownServerConnections: Detaching application from window server$
+
+^%DATE% %HOSTNAME% Chess%PID%: \*\*\* WARNING: Method selectRow:byExtendingSelection: in class NSTableView is deprecated\. It will be removed in a future release and should no longer be used\.$
+
+^%DATE% %HOSTNAME% com\.apple\.FolderActions\.enabled%PID%: .* %HOSTNAME%.%DOMAIN% Folder Actions Dispatcher%PID% <Warning>: CGSDisplayServerShutdown: Detaching display subsystem from window server$
+^%DATE% %HOSTNAME% com\.apple\.FolderActions\.enabled%PID%: .* %HOSTNAME%.%DOMAIN% Folder Actions Dispatcher%PID% <Warning>: CGSShutdownServerConnections: Detaching application from window server$
+
+^%DATE% %HOSTNAME% com\.apple\.launchctl\.Aqua%PID%: com\.apple\.FolderActions\.folders: Already loaded$
+
+^%DATE% %HOSTNAME% com\.apple\.launchd\[1\] \(com\.apple\.xprotectupdater%PID%\): Exited with exit code: 255$
+^%DATE% %HOSTNAME% com\.apple\.launchd\[1\]: \*\*\* launchd\[1\] has started up\. \*\*\*$
+
+^%DATE% %HOSTNAME% com\.apple\.RemoteUI%PID%: HTTP2 Streaming Reads ON$
+
+^%DATE% %HOSTNAME% com\.apple\.SecurityServer%PID%: Entering service$
+^%DATE% %HOSTNAME% com\.apple\.SecurityServer%PID%: Killing auth hosts$
+^%DATE% %HOSTNAME% com\.apple\.SecurityServer%PID%: Session 0x%HEX% (attributes 0x%HEX%|created|dead|destroyed)$
+^%DATE% %HOSTNAME% com\.apple\.SecurityServer%PID%: Succeeded authorizing right \'system\.burn\' by client \'/Applications/iTunes\.app\' for authorization created by \'/Applications/iTunes\.app\'$
+^%DATE% %HOSTNAME% com\.apple\.SecurityServer%PID%: Succeeded authorizing right \'system\.login\.console\' by client \'/System/Library/CoreServices/loginwindow\.app\' for authorization created by \'/System/Library/CoreServices/loginwindow\.app\'$
+^%DATE% %HOSTNAME% com\.apple\.SecurityServer%PID%: Succeeded authorizing right \'system\.login\.done\' by client \'/System/Library/CoreServices/loginwindow\.app\' for authorization created by \'/System/Library/CoreServices/loginwindow\.app\'$
+^%DATE% %HOSTNAME% com\.apple\.SecurityServer%PID%: UID %INT% authenticated as user %USERS% \(UID %INT%\) for right \'system\.preferences\.accounts\'$
+^%DATE% %HOSTNAME% com\.apple\.SecurityServer%PID%: UID %INT% authenticated as user %USERS% \(UID %INT%\) for right \'system\.print\.operator\'$
+
+^%DATE% %HOSTNAME% com\.apple\.UserEventAgent-Aqua%PID%: .* %HOSTNAME%.%DOMAIN% UserEventAgent%PID% <Warning>: CGSDisplayServerShutdown: Detaching display subsystem from window server$
+^%DATE% %HOSTNAME% com\.apple\.UserEventAgent-Aqua%PID%: .* %HOSTNAME%.%DOMAIN% UserEventAgent%PID% <Warning>: CGSShutdownServerConnections: Detaching application from window server$
+
+^%DATE% %HOSTNAME% configd%PID%: hostname \(multicast DNS\) = %HOSTNAME%$
+^%DATE% %HOSTNAME% configd%PID%: hostname \(reverse DNS query\) = %HOSTNAME%\.%DOMAIN%%$
+^%DATE% %HOSTNAME% configd%PID%: loading com\.apple\.SystemConfiguration\.wwanConfig$
+^%DATE% %HOSTNAME% configd%PID%: NetBIOS name \(reverse DNS query\) = %HOSTNAME%$
+^%DATE% %HOSTNAME% configd%PID%: SCPreferences\(PowerManagement UUID Temp Storage:com\.apple\.PowerManagement\.plist\) lock held for %FLOAT% seconds$
+^%DATE% %HOSTNAME% configd%PID%: setting hostname to \"%HOSTNAME%.%DOMAIN%\"$
+^%DATE% %HOSTNAME% configd%PID%: Sleep: Success - AC - (Maintenance|Power Button|Software) Sleep$
+^%DATE% %HOSTNAME% configd%PID%: Wake: Success - AC - OHC2$
+
+^%DATE% %HOSTNAME% %DASHBOARD% \(com\.apple\.widget\.itunes\) undefined: TypeError: \'undefined\' is not an object \(line: 0\)$
+^%DATE% %HOSTNAME% %DASHBOARD% fetch: advisory list is not the correct format, could not obtain being marker$
+^%DATE% %HOSTNAME% %DASHBOARD% fetch: unable to get sql from net$
+^%DATE% %HOSTNAME% %DASHBOARD% fetch-parsers: parsers file invalid$
+^%DATE% %HOSTNAME% %DASHBOARD% no upcoming events
+
+^%DATE% %HOSTNAME% DirectoryService%PID%: Launched version 6\.5 \(v621\.12\)$
+
+^%DATE% %HOSTNAME% diskarbitrationd%PID%: unable to probe /dev/disk1s0 \(status code 0xFFFFFFFC\)\.$
+
+^%DATE% %HOSTNAME% %DOCK% Client state being vacuumed$
+^%DATE% %HOSTNAME% %DOCK% objc%PID%: Class ABLargeTypeController is implemented in both /System/Library/Frameworks/AddressBook\.framework/Versions/A/AddressBook and /Library/Widgets/Address Book\.wdgt/AddressBook\.widgetplugin/Contents/MacOS/AddressBook\. One of the two will be used\. Which one is undefined\.$
+
+^%DATE% %HOSTNAME% %FINDER% CFUserNotificationDisplayAlert:  called from main application thread, will block waiting for a response\.$
+^%DATE% %HOSTNAME% %FINDER% setcharset expected \'CP437\' got \'437\'?
+
+^%DATE% %HOSTNAME% Firewall%PID%: master is listening from 127\.0\.0\.1:25 proto=6$
+
+^%DATE% %HOSTNAME% Folder Actions Dispatcher%PID%: CGSDisplayServerShutdown: Detaching display subsystem from window server$
+^%DATE% %HOSTNAME% Folder Actions Dispatcher%PID%: CGSShutdownServerConnections: Detaching application from window server$
+
+^%DATE% %HOSTNAME% FrontRow%PID%: \*\*\*\*\*\*\*\* Application Startup \*\*\*\*\*\*\*\*$
+^%DATE% %HOSTNAME% FrontRow%PID%: FR: Terminating in background because database changed\.$
+^%DATE% %HOSTNAME% FrontRow%PID%: T:\[0x%HEX%\]
+
+^%DATE% %HOSTNAME% fseventsd%PID%: event logs in /.*/.fseventsd out of sync with volume\.  destroying old logs\. \(%INT% %INT% %INT%\)$
+^%DATE% %HOSTNAME% fseventsd%PID%: iterate_devices: device table changed\.  restarting device scan\.$
+^%DATE% %HOSTNAME% fseventsd%PID%: log dir: /.*/.fseventsd getting new uuid: %HEX%-%HEX%-%HEX%-%HEX%-%HEX%$
+
+^%DATE% %HOSTNAME% hdiejectd%PID%: quitCheck: calling exit\(0\)$
+^%DATE% %HOSTNAME% hdiejectd%PID%: running$
+
+^%DATE% %HOSTNAME% installd%PID%: PackageKit: ----- Begin install -----$
+^%DATE% %HOSTNAME% installd%PID%: Starting$
+^%DATE% %HOSTNAME% installd%PID%: uid=0, euid=0$
+
+^%DATE% %HOSTNAME% iPhoto%PID%: kCGErrorFailure: Set a breakpoint @ CGErrorBreakpoint\(\) to catch errors as they are logged\.$
+^%DATE% %HOSTNAME% iPhoto%PID%: kCGErrorIllegalArgument: _CGSFindSharedWindow: WID -1$
+^%DATE% %HOSTNAME% iPhoto%PID%: kCGErrorIllegalArgument: CGSSetWindowShadowAndRimParametersWithStretch: Invalid window 0xffffffff$
+
+^%DATE% %HOSTNAME% %ITUNES%%PID%: _GCDSearchPthreadOnceRoutine \(thread 0x%HEX%\): Looked up GCD symbols, got addresses: %HEX%, GCD_AVAILABLE is 1$
+^%DATE% %HOSTNAME% %ITUNES%%PID%: _NotificationSocketReadCallbackGCD \(thread 0xa02d0540\): Unexpected connection closure\.\.\.$
+^%DATE% %HOSTNAME% %ITUNES%%PID%: tid:%HEX% - AMRAuthInstallDeletePersonalizedBundle
+
+^%DATE% %HOSTNAME% launchproxy%PID%: /usr/libexec/sshd-keygen-wrapper: Connection from: %IP% on port: %INT%$
+
+^%DATE% %HOSTNAME% login%PID%: DEAD_PROCESS: %INT% (console|ttys%INT%)$
+^%DATE% %HOSTNAME% login%PID%: USER_PROCESS: %INT% (console|ttys%INT%)$
+
+^%DATE% %HOSTNAME% %LOGINWINDOW% <Warning>: CGSShutdownServerConnections: Detaching application from window server$
+^%DATE% %HOSTNAME% %LOGINWINDOW% Application hardKill returned -600$
+^%DATE% %HOSTNAME% %LOGINWINDOW% Application terminate returned -600$
+^%DATE% %HOSTNAME% %LOGINWINDOW% askForPasswordBuiltIn after makekey, Currenttime:[0-9/]+ [0-9:\.]+ (AM|PM) - Waketime:[0-9/]+ [0-9:\.]+ (AM|PM) = Deltatime:%FLOAT%
+^%DATE% %HOSTNAME% %LOGINWINDOW% builtInAuthWindowDidResignKey$
+^%DATE% %HOSTNAME% %LOGINWINDOW% CGSDisplayServerShutdown: Detaching display subsystem from window server$
+^%DATE% %HOSTNAME% %LOGINWINDOW% CGSShutdownServerConnections: Detaching application from window server$
+^%DATE% %HOSTNAME% %LOGINWINDOW% DEAD_PROCESS: %INT% (console|ttys%INT%)$
+^%DATE% %HOSTNAME% %LOGINWINDOW% handleUnlockResult$
+^%DATE% %HOSTNAME% %LOGINWINDOW% handleUnlockResult, Currenttime:[0-9/]+ [0-9\.:]+ (AM|PM) - Waketime:[0-9/]+ [0-9\.:]+ (AM|PM) = Deltatime:%FLOAT%$
+^%DATE% %HOSTNAME% %LOGINWINDOW% in pam_sm_authenticate\(\): Failed to determine Kerberos principal name\.$
+^%DATE% %HOSTNAME% %LOGINWINDOW% Login Window - Returned from Security Agent$
+^%DATE% %HOSTNAME% %LOGINWINDOW% Login Window Started Security Agent$
+^%DATE% %HOSTNAME% %LOGINWINDOW% loginwindow SleepWakeCallback WILL sleep$
+^%DATE% %HOSTNAME% %LOGINWINDOW% loginwindow SleepWakeCallback will power on, Currenttime:[0-9/]+ [0-9\.:]+ (AM|PM) - Waketime:[0-9/]+ [0-9\.:]+ (AM|PM) = Deltatime:%FLOAT%$
+^%DATE% %HOSTNAME% %LOGINWINDOW% no spins reported for this wake$
+^%DATE% %HOSTNAME% %LOGINWINDOW% USER_PROCESS: %INT% console$
+
+^%DATE% %HOSTNAME% Mail%PID%: Client state being vacuumed$
+^%DATE% %HOSTNAME% Mail%PID%: Mail: SafetyNet issued SELECT before IDLE - wrongState:0$
+^%DATE% %HOSTNAME% Mail%PID%: Mail: SafetyNet not needed - wrongState:0$
+^%DATE% %HOSTNAME% Mail%PID%: NSScanner: nil string argument$
+^%DATE% %HOSTNAME% Mail%PID%: Upgrading Library from 4\.29 to 4\.39$
+
+^%DATE% %HOSTNAME% mdworker%PID%: \(Error\) SyncInfo: Catalog changed during searchfs too many times -- falling back to fsw search /$
+
+^%DATE% %HOSTNAME% MIDIServer%PID%: MIDIServer %PID% starting; arch=x86_64$
+
+^%DATE% %HOSTNAME% Mingler%PID%: Sync Conflicts Type: com\.apple\.contacts\.Contact$
+
+^%DATE% %HOSTNAME% mDNSResponder%PID%: mDNSResponder mDNSResponder-258\.21 \(May 26 2011 14:40:13\) starting$
+^%DATE% %HOSTNAME% mDNSResponder%PID%: PenaltyTimeForServer: PenaltyTime negative (|-)%INT%, \(server penaltyTime (|-)%INT%, timenow (|-)%INT%\) resetting the penalty$
+
+^%DATE% %HOSTNAME% newsyslog%PID%: logfile turned over$
+
+^%DATE% %HOSTNAME% ntpd%PID%: bind\(\) fd 28, family 30, port 123, scope 53462, addr %IPv6%, in6_is_addr_multicast=0 flags=0x11 fails: Can\'t assign requested address$
+^%DATE% %HOSTNAME% ntpd%PID%: Deleting interface \#%INT% [a-z0-9]+, %IP%\#123, interface stats: received=%INT%, sent=%INT%, dropped=0, active_time=%INT% secs$
+^%DATE% %HOSTNAME% ntpd%PID%: failed to initialize interface for address %IPv6%$
+^%DATE% %HOSTNAME% ntpd%PID%: Listening on interface \#%INT% [a-z0-9]+, %IP%\#123 (En|Dis)abled$
+^%DATE% %HOSTNAME% ntpd%PID%: Listening on routing socket on fd \#27 for interface updates$
+^%DATE% %HOSTNAME% ntpd%PID%: ntp_io: estimated max descriptors: 256, initial socket boundary: 20$
+^%DATE% %HOSTNAME% ntpd%PID%: unable to create socket on en0 \(%INT%\) for %IPv6%#123$
+
+^%DATE% %HOSTNAME% pkgutil%PID%: Updating receipt \'.*\' path \'.*\' on \'.*\' with actual metadata from \'.*\'\.$
+
+^%DATE% %HOSTNAME% PluginProcess%PID%: $
+^%DATE% %HOSTNAME% PluginProcess%PID%: HIToolbox: received notification of WindowServer event port death\.$
+^%DATE% %HOSTNAME% PluginProcess%PID%: port matched the WindowServer port created in BindCGSToRunLoop$
+^%DATE% %HOSTNAME% PluginProcess%PID%: Process manager already initialized -- can\'t fully enable headless mode\.$
+
+^%DATE% %HOSTNAME% postfix/master%PID%: daemon started -- version 2\.5\.14, configuration /etc/postfix$
+^%DATE% %HOSTNAME% postfix/master%PID%: master exit time has arrived$
+
+^%DATE% %HOSTNAME% PTPCamera%PID%: CGSDisplayServerShutdown: Detaching display subsystem from window server$
+^%DATE% %HOSTNAME% PTPCamera%PID%: CGSShutdownServerConnections: Detaching application from window server$
+
+^%DATE% %HOSTNAME% SafariSyncClient%PID%: Client state being vacuumed$
+
+^%DATE% %HOSTNAME% sandboxd%PID%: sshd\(%INT%\) deny mach-per-user-lookup$
+
+^%DATE% %HOSTNAME% ScreenSaverEngine%PID%: can\'t load bundle at path /Library/Screen Savers/Pacman\.saver$
+^%DATE% %HOSTNAME% ScreenSaverEngine%PID%: Can\'t register screen saver connection \'com\.apple\.ScreenSaverDaemon\'$
+^%DATE% %HOSTNAME% ScreenSaverEngine%PID%: ScreenSaverModules: can\'t load bundle at path /Library/Screen Savers/Pacman\.saver$
+
+^%DATE% %HOSTNAME% SecurityAgent%PID%: CGSDisplayServerShutdown: Detaching display subsystem from window server$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: CGSShutdownServerConnections: Detaching application from window server$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: HIToolbox: received notification of WindowServer event port death\.$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: Login Window done$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: Login Window login proceeding$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: Login Window Showing Progress$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: NSSecureTextFieldCell detected a field editor \(\(null\)\) that is not a NSTextView subclass designed to work with the cell\. Ignoring\.\.\.$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: port matched the WindowServer port created in BindCGSToRunLoop$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: Showing Login Window$
+^%DATE% %HOSTNAME% SecurityAgent%PID%: User info context values set for %USERS%$
+
+^%DATE% %HOSTNAME% %SOFTWARE_UPDATE% Calculated need %INT% MB; %INT% MB free\.$
+^%DATE% %HOSTNAME% %SOFTWARE_UPDATE% Checking for updates$
+^%DATE% %HOSTNAME% %SOFTWARE_UPDATE% JS: 10\.6\.8$
+^%DATE% %HOSTNAME% %SOFTWARE_UPDATE% JS: Firmware is up to date\.$
+^%DATE% %HOSTNAME% %SOFTWARE_UPDATE% JS: model = .*$
+^%DATE% %HOSTNAME% %SOFTWARE_UPDATE% SWU: scan found 0 products:$
+
+^%DATE% %HOSTNAME% sshd%PID%: (DEAD|USER)_PROCESS: %INT% ttys%INT%$
+
+^%DATE% %HOSTNAME% storeagent%PID%: port created$
+
+^%DATE% %HOSTNAME% SubmitDiagInfo%PID%: Cleaning up expired diagnostic messages database at path: /var/log/DiagnosticMessages/2011\.11\.25\.asl$
+
+^%DATE% %HOSTNAME% SyncServer%PID%: \[110fc0\] |SyncServer|Warning| Refreshing watchdog because of a calendar time change alert\.$
+^%DATE% %HOSTNAME% SyncServer%PID%: \[110ff0\] \|DataManager\|Warning\| Resetting client com\.apple\.Dashboard since it has not synced since
+^%DATE% %HOSTNAME% SyncServer%PID%: Datamanager Vacuuming all the truth segments\.$
+
+^%DATE% %HOSTNAME% /System/Library/CoreServices/CCacheServer\.app/Contents/MacOS/CCacheServer%PID%: Starting up\.$
+^%DATE% %HOSTNAME% /System/Library/CoreServices/CCacheServer\.app/Contents/MacOS/CCacheServer%PID%: No valid tickets, timing out$
+
+^%DATE% %HOSTNAME% /System/Library/CoreServices/loginwindow\.app/Contents/MacOS/loginwindow%PID%: Login Window Application Started$
+
+^%DATE% %HOSTNAME% /System/Library/CoreServices/NetAuthAgent\.app/Contents/MacOS/NetAuthAgent%PID%: setcharset expected \'CP437\' got \'437\'.*$
+
+^%DATE% %HOSTNAME% /System/Library/Frameworks/ApplicationServices\.framework/Versions/A/Frameworks/CoreGraphics\.framework/Resources/DMProxy%PID%: No server connection, no profiles loaded$
+
+^%DATE% %HOSTNAME% /System/Library/PrivateFrameworks/MobileDevice\.framework/Versions/Current/AppleMobileDeviceHelper\.app/Contents/Resources/MDCrashReportTool%PID%: %INT%:1894730944\|CrashReportCopierAFC.m:-\[CrashReportCopierAFC copyRemotePath:toLocalDirectory:preserveDirectoryStructure:localPathOut:usingConnection:\]\| ERROR: AFCFileRefOpen on ./OTAUpdate-2011-11-25-11-34-05\.plist failed$
+
+^%DATE% %HOSTNAME% System Preferences%PID%: Can\'t open search index until its validated.*$
+^%DATE% %HOSTNAME% System Preferences%PID%: Preference pane loaded$
+
+^%DATE% %HOSTNAME% Preview%PID%: Sleeping on wait for a shared GL context$
+
+^%DATE% %HOSTNAME% SystemUIServer%PID%: -\[MDMenuWindow _checkTopRight\] the window is off the screen topRight point is \{%INT%, %INT%\}$
+
+^%DATE% %HOSTNAME% UnmountAssistant%PID%: $
+^%DATE% %HOSTNAME% UnmountAssistant%PID%: 0x%HEX%$
+^%DATE% %HOSTNAME% UnmountAssistant%PID%: Volume unmounted successfully$
+
+^%DATE% %HOSTNAME% UserEventAgent%PID%: CGSDisplayServerShutdown: Detaching display subsystem from window server$
+^%DATE% %HOSTNAME% UserEventAgent%PID%: CGSShutdownServerConnections: Detaching application from window server$
+^%DATE% %HOSTNAME% UserEventAgent%PID%: MIG: server died: server_thread : _CGSGetServerThread$
+
+^%DATE% %HOSTNAME% /usr/libexec/dpd%PID%: Apple Backlight Display exists!$
+^%DATE% %HOSTNAME% /usr/libexec/dpd%PID%: AppleBacklightDisplayPublishedCallback\(\): ThunderboltInitializeMccsConfig returned e00002d8$
+
+^%DATE% %HOSTNAME% /usr/libexec/launchdadd%PID%: server->_workers = 0$
+
+^%DATE% %HOSTNAME% WebKitPluginHost%PID%: CGSDisplayServerShutdown: Detaching display subsystem from window server$
+^%DATE% %HOSTNAME% WebKitPluginHost%PID%: CGSShutdownServerConnections: Detaching application from window server$
+^%DATE% %HOSTNAME% WebKitPluginHost%PID%: kCGErrorRangeCheck: On-demand launch of the Window Server is allowed for root user only\.$
+^%DATE% %HOSTNAME% WebKitPluginHost%PID%: MIG: server died: CGSReleaseShmem : Cannot release shared memory$
+
+^%DATE% %HOSTNAME% WebProcess%PID%: CGSShutdownServerConnections: Detaching application from window server$
+^%DATE% %HOSTNAME% WebProcess%PID%: Periodic CFURLCache Insert stats \(iters: %INT%\) - Tx time:%FLOAT%, \# of Inserts: %INT%, \# of bytes written: %INT%, Did shrink: NO, Size of cache-file: %INT%, Num of Failures: 0$
+

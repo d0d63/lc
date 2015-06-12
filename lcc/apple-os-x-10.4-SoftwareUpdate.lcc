@@ -1,0 +1,8 @@
+# Copyright (c) 2009, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: apple-os-x-10.4-SoftwareUpdate.lcc,v 1.2 2010/01/05 03:01:38 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% Software Update%PID%: __choice_su_visible returned wrong type \(\(\)\)$
+^%DATE% %HOSTNAME% Software Update%PID%: Distribution: .*$
+^%DATE% %HOSTNAME% Software Update%PID%: JS: 10\.4\.11$
+^%DATE% %HOSTNAME% Software Update%PID%: JS: Firmware is up to date\.$

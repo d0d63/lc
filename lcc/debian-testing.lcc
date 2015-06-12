@@ -1,0 +1,25 @@
+# Copyright (c) 2005, 2006, 2007, 2008, 2010 M. Dodge Mumford. All rights reserved.
+# $dodge: debian-testing.lcc,v 1.9 2013/12/19 14:38:43 dodge Exp $
+# vim: tw=0
+
+^%DATE% %HOSTNAME% -- MARK --$
+^%DATE% %HOSTNAME% last message repeated [0-9]+ times$
+
+^%DATE% %HOSTNAME% CRON%PID%: pam_unix\(cron:session\): session closed for user root$
+^%DATE% %HOSTNAME% CRON%PID%: pam_unix\(cron:session\): session opened for user root by \(uid=0\)$
+^%DATE% %HOSTNAME% /USR/SBIN/CRON%PID%: \(root\) CMD \(   cd / \&\& run-parts --report /etc/cron.hourly\)$
+^%DATE% %HOSTNAME% /USR/SBIN/CRON%PID%: \(root\) CMD \(test -x /usr/sbin/anacron \|\| \( cd / \&\& run-parts --report /etc/cron.(daily|weekly|monthly) \)\)
+
+%DATE% %HOSTNAME% dhclient: DHCPACK from %IPv4%$
+%DATE% %HOSTNAME% dhclient: bound to %IPv4% -- renewal in %INT% seconds\.$
+
+^%DATE% %HOSTNAME% sshd%PID%: pam_unix\(ssh:session\): session opened for user %USERS% by \(uid=0\)$
+
+^%DATE% %HOSTNAME% su%PID%: \+ \?\?\? root:nobody$
+^%DATE% %HOSTNAME% su%PID%: pam_unix\(su:session\): session closed for user nobody$
+^%DATE% %HOSTNAME% su%PID%: pam_unix\(su:session\): session opened for user nobody by \(uid=0\)$
+^%DATE% %HOSTNAME% su%PID%: Successful su for nobody by root$
+
+^%DATE% %HOSTNAME% rsyslogd: \[origin software=\"rsyslogd\" swVersion=\"5\.8\.11\" x-pid=\"%INT%\" x-info=\"http://www\.rsyslog\.com\"\] rsyslogd was HUPed$
+
+^%DATE% %HOSTNAME% syslogd 1\.5\.0#(1\.1|2|6\.2): restart\.$
