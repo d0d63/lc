@@ -1,18 +1,22 @@
 # Copyright (c) 2013, 2015 M. Dodge Mumford. All rights reserved.
 
+^%DATE% %HOSTNAME% anacron%PID%: Anacron 2\.3 started on %INT%-%INT%-%INT%$
 ^%DATE% %HOSTNAME% anacron%PID%: Job \`cron\.(daily|weekly|monthly)\' started$
 ^%DATE% %HOSTNAME% anacron%PID%: Job \`cron\.(daily|weekly|monthly)\' terminated$
-^%DATE% %HOSTNAME% anacron%PID%: Job \`cron\.daily\' terminated$
-^%DATE% %HOSTNAME% anacron%PID%: Normal exit \(%INT% jobs run\)$
-^%DATE% %HOSTNAME% anacron%PID%: Updated timestamp for job \`cron\.(weekly|monthly)\' to [0-9\-]+$
+^%DATE% %HOSTNAME% anacron%PID%: Jobs will be executed sequentially$
+^%DATE% %HOSTNAME% anacron%PID%: Normal exit \(%INT% job(|s) run\)$
+^%DATE% %HOSTNAME% anacron%PID%: Updated timestamp for job \`cron\.(daily|weekly|monthly)\' to [0-9\-]+$
+^%DATE% %HOSTNAME% anacron%PID%: Will run job \`cron\.daily\' in 5 min\.$
 
 ^%DATE% %HOSTNAME% CRON%PID%: pam_unix\(cron:session\): session closed for user root$
 ^%DATE% %HOSTNAME% CRON%PID%: pam_unix\(cron:session\): session opened for user root by \(uid=0\)$
 ^%DATE% %HOSTNAME% CRON%PID%: \(root\) CMD \(   cd / && run-parts --report /etc/cron\.hourly\)$
-^%DATE% %HOSTNAME% CRON%PID%: \(root\) CMD \(test -x /usr/sbin/anacron \|\| \( cd / && run-parts --report /etc/cron\.daily \)\)$
+^%DATE% %HOSTNAME% CRON%PID%: \(root\) CMD \(test -x /usr/sbin/anacron \|\| \( cd / && run-parts --report /etc/cron.(daily|weekly|monthly) \)\)$
+^%DATE% %HOSTNAME% CRON%PID%: \(root\) CMD \(start -q anacron \|\| :\)$
 
 ^%DATE% %HOSTNAME% dhclient: bound to %IPv4% -- renewal in %INT% seconds\.$
 ^%DATE% %HOSTNAME% dhclient: DHCPREQUEST of %IPv4% on eth0 to %IPv4% port 67$
 ^%DATE% %HOSTNAME% dhclient: DHCPACK of %IPv4% from %IPv4%$
 
 ^%DATE% %HOSTNAME% rsyslogd: \[origin software=\"rsyslogd\" swVersion=\"5\.8\.6\" x-pid=\"%INT%\" x-info=\"http://www\.rsyslog\.com\"\] rsyslogd was HUPed$
+^%DATE% %HOSTNAME% rsyslogd: last message repeated %INT% times$
