@@ -23,6 +23,9 @@ export PATH=/sbin:/usr/sbin:/usr/local/sbin:/bin:/usr/bin:/usr/local/bin
 
 cd ${WORKINGDIR} || exit 1
 
+# If lcc/eraseme.lcc exists, remove it.
+rm -f lcc/eraseme.lcc
+
 ./lc /var/log/all* > current
 
 diff -a last current| grep -v "^<" | egrep -v "^[0-9,acd\-][0-9,acd\-]*$" > delta
