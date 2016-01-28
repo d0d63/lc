@@ -12,7 +12,7 @@
 ^%DATE% %HOSTNAME% dhcpd%PID%: DHCPACK on %IPv4% to %ETHER% via [^ ]+$
 ^%DATE% %HOSTNAME% dhcpd%PID%: DHCPDISCOVER from %ETHER% via [^ ]+$
 ^%DATE% %HOSTNAME% dhcpd%PID%: DHCPOFFER on %IPv4% to %ETHER% via [^ ]+$
-^%DATE% %HOSTNAME% dhcpd%PID%: DHCPRELEASE of %IPv4% from %ETHER% via fxp2 \(found\)$
+^%DATE% %HOSTNAME% dhcpd%PID%: DHCPRELEASE of %IPv4% from %ETHER% via [^ ]+ (\(found\)|\(not found\)|for nonexistent lease)$
 ^%DATE% %HOSTNAME% dhcpd%PID%: DHCPREQUEST for %IPv4% from %ETHER% via [^ ]+$
 
 ^%DATE% %HOSTNAME% newsyslog%PID%: logfile turned over$
