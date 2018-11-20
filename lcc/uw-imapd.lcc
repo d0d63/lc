@@ -5,5 +5,6 @@
 ^%DATE% %HOSTNAME% imapd%PID%: Hangup user=%USERS% host=\[%IP%\]$
 ^%DATE% %HOSTNAME% imapd%PID%: imaps SSL service init from %IPv4%
 ^%DATE% %HOSTNAME% imapd%PID%: Killed \(lost mailbox lock\) user=%USERS% host=.*\[%IP%\]$
+^%DATE% %HOSTNAME% imapd%PID%: Login failed user=.* auth=.* host=\[%IP%\]$
 ^%DATE% %HOSTNAME% imapd%PID%: Login user=%USERS% host=.*\[%IP%\]$
 ^%DATE% %HOSTNAME% imapd%PID%: Unexpected client disconnect, while reading literal user=%USERS% (|.*)\[%IP%\]
